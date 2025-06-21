@@ -1,5 +1,5 @@
 ---
-title: "03 - Styling Quarto"
+title: "03 - Theming Quarto"
 backgroundcolor: "white"
 ---
 

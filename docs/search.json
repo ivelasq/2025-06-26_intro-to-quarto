@@ -58,7 +58,7 @@
   {
     "objectID": "03-theming/index.html",
     "href": "03-theming/index.html",
-    "title": "03 - Styling Quarto",
+    "title": "03 - Theming Quarto",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
@@ -68,7 +68,7 @@
   {
     "objectID": "03-theming/index.html#slides",
     "href": "03-theming/index.html#slides",
-    "title": "03 - Styling Quarto",
+    "title": "03 - Theming Quarto",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
@@ -78,7 +78,7 @@
   {
     "objectID": "03-theming/index.html#exercises",
     "href": "03-theming/index.html#exercises",
-    "title": "03 - Styling Quarto",
+    "title": "03 - Theming Quarto",
     "section": "Exercises",
     "text": "Exercises\nIn the workshop repo, there is a file called 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document.\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.",
     "crumbs": [
