@@ -15,7 +15,7 @@ While Quarto itself doesn't require a programming language, the exercises will i
 * Requires a free account at <https://github.com/>
 * Go to the GitHub repo: <https://github.com/ivelasq/gasp2025-quarto-codespace>
 * Click "Use this template" then "Open in a codespace"
-  * Please note that opening the codespace may take a few minutes.
+  * Please note that loading the codespace may take a few minutes.
 
 **Option 3: Local Installation**
 
@@ -45,7 +45,9 @@ Choose one editor and follow the steps:
 
 ### Accessing the Workshop Materials
 
-To get the workshop files:
+If you are using a cloud-based option, the files will be included in the project folder.
+
+If you are not using a cloud-based option:
 
 **If you use Git/GitHub:**
 

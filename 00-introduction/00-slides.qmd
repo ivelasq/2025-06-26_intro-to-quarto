@@ -218,7 +218,7 @@ Built for technical documents:
 
 ## Display data and results {.smaller}
 
-[Vote Idaho Election Page](https://results.voteidaho.gov){preview-link="true"} by Andrew Heiss and the Idaho Secretary of State
+[Vote Idaho Election Page](https://results.voteidaho.gov){preview-link="true"} by Andrew Heiss (Department of Public Management and Policy, Georgia State University) and the Idaho Secretary of State
 
 [![](../images/id-elections.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://fosstodon.org/@andrew@fediscience.org/112485099746718354)
 
@@ -238,7 +238,7 @@ Health Trends
 
 ## Walk through a story {.smaller}
 
-[Council Housing & Neighborhood Income Inequality in Vienna](https://mschnetzer.github.io/scrollytell_gemeindebau/){preview-link="true"} by Tamara Premrov and Matthias Schnetzer, European Centre for Social Welfare Policy and Research, Austria
+[Council Housing & Neighborhood Income Inequality in Vienna](https://mschnetzer.github.io/scrollytell_gemeindebau/){preview-link="true"} by Tamara Premrov and Matthias Schnetzer (European Centre for Social Welfare Policy and Research, Austria)
 
 <center><script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/izl69pu9ua.js" async type="module"></script><style>wistia-player[media-id='izl69pu9ua']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/izl69pu9ua/swatch'); display: block; filter: blur(5px); }</style> <wistia-player media-id="izl69pu9ua" aspect="1.7777777777777777" style="width: 800px;height: 463px;"></wistia-player></center>
 
@@ -257,7 +257,7 @@ Health Trends
 
 ## Automate and reproduce your output {.smaller}
 
-[Duplicating Quarto elements with code templates to reduce copy and paste errors](https://waterdata.usgs.gov/blog/quarto-template-demo/){preview-link="true"} by Althea A. Archer, United States Geological Survey
+[Duplicating Quarto elements with code templates to reduce copy and paste errors](https://waterdata.usgs.gov/blog/quarto-template-demo/){preview-link="true"} by Althea A. Archer (United States Geological Survey)
 
 ![](../images/quarto_template_overview.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 
@@ -267,7 +267,7 @@ With Quarto, you can create reports or presentations that update automatically w
 
 ## Get your team on the same page {.smaller}
 
-[We Converted Our Documentation to Quarto](https://melissavanbussel.quarto.pub/posit-conf-2023/#/section), Melissa Van Bussel, Statistics Canada
+[We Converted Our Documentation to Quarto](https://melissavanbussel.quarto.pub/posit-conf-2023/#/section) by Melissa Van Bussel (Statistics Canada)
 
 ::::::: columns
 :::: {.column width="80%"}
@@ -286,6 +286,11 @@ With Quarto, you can create reports or presentations that update automatically w
 ## ️Wrap Up {background-image="../images/quarto-chat.jpg" background-color="#2b3d5b"}
 
 Quarto + Communication = ❤
+
+
+::: aside
+Photo by <a href="https://unsplash.com/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Sikkema</a> on <a href="https://unsplash.com/photos/two-white-speech-bubbles-sitting-on-top-of-a-brown-surface-sWRPYgjpygQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+:::
 
 # Getting Started
 
