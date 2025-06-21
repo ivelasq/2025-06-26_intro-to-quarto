@@ -74,6 +74,8 @@ pak::pak(c("dplyr", "ggplot2", "here", "janitor", "knitr", "readr", "scales"))
 
 ### Python
 
+Create your virtual environment, then run:
+
 ```python
 pip install -r requirements.txt
 ```
