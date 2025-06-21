@@ -13,7 +13,9 @@ While Quarto itself doesn't require a programming language, the exercises will i
 **Option 2: GitHub Codespaces (VS Code in the browser)**
 
 * Requires a free account at <https://github.com/>
-* Open the Codespaces project link: <https://fluffy-system-g4xqqq6v7r729w7.github.dev/>
+* Go to the GitHub repo: <https://github.com/ivelasq/gasp2025-quarto-codespace>
+* Click "Use this template" then "Open in a codespace"
+  * Please note that opening the codespace may take a few minutes.
 
 **Option 3: Local Installation**
 
