@@ -96,7 +96,7 @@ What you will walk away with:
 
 ::: incremental
 
-* Workshop website: [bit.ly/gasp2025-quarto](https://pbit.ly/gasp2025-quarto)
+* Workshop website: [bit.ly/gasp2025-quarto](https://bit.ly/gasp2025-quarto)
 * Workshop exercise repo: <https://github.com/ivelasq/gasp2025-quarto-exercises>
 
 :::
