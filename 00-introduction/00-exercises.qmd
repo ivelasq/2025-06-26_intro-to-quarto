@@ -1,6 +1,6 @@
 To follow along with the workshop exercises, you'll need Quarto version 1.7+ and access to a code editor that supports R or Python.
 
-While Quarto itself doesn't require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, we recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python). Please note, I will delete the Posit Cloud and GitHub Codespace in a few days, so please make a copy of your materials if you would like to keep them.
+While Quarto itself doesn't require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, I recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python). I will delete the Posit Cloud and GitHub Codespace in a few days, so please make a copy of your materials if you would like to keep them.
 
 ### Recommended Setup Options
 
