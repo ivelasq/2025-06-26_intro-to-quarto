@@ -1,0 +1,17 @@
+* Add `final-py.qmd` or `final-r.qmd` under `Home` and give it the text `Report`:
+
+```{.yaml filename="_quarto.yml"}
+navbar:
+  left:
+    - href: index.qmd
+      text: Home
+    - href: final-r.qmd
+      text: Report
+```
+
+* Open `about.qmd` and add some information about yourself. Feel free to edit the YAML!
+* Render the project:
+  * **All editors:** Run `quarto render` in the Terminal.
+  * **RStudio:** Click the "Render" button.
+  * **VS Code and Positron:** Click "Preview".
+  

@@ -1,0 +1,488 @@
+---
+title: "Quarto Documents"
+format: 
+  revealjs:
+    transition: fade
+    background-transition: fade
+    theme: ../style.scss
+filters:
+  - reveal-auto-agenda
+---
+
+# Anatomy of a Quarto document
+
+## Anatomy of a Quarto document
+
+`.qmd` file format with three components:
+
+1.  YAML: Metadata
+
+2.  Text: Markdown
+
+3.  Code: Executed via `jupyter` or `knitr`
+
+. . .
+
+**Weave it all together**, and you have beautiful, powerful, and useful outputs!
+
+## Anatomy of a Quarto document
+
+**Metadata: YAML**
+
+:::: columns
+::: {.column .fragment}
+
+````{.markdown filename="my-document.qmd"}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: html
+---
+````
+
+:::
+
+::: {.column .fragment}
+* "Yet another markup language”
+* Metadata of your document
+* Demarcated by three dashes (`---`) on either end
+*  Uses key-value pairs in the format `key: value`
+:::
+
+::::
+
+## Anatomy of a Quarto document
+
+**Text: Markdown**
+
+````{.markdown filename="my-document.qmd"}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: html
+---
+
+This dataset records Olympic athlete details.
+````
+
+. . .
+
+* Markdown is a lightweight language for creating formatted text
+* Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax
+
+## Anatomy of a Quarto document
+
+**Text: Markdown**
+
+```{=html}
+<div class="sourceCode">
+<pre class="sourceCode markdown">
+<code class="sourceCode markdown">
+The `olympic.csv` dataset records [**Olympic**](https://en.wikipedia.org/wiki/Olympic_Games) athlete details.
+</code>
+</pre>
+</div>
+```
+
+The `olympic.csv` dataset records [**Olympic**](https://en.wikipedia.org/wiki/Olympic_Games) athlete details.
+
+## Anatomy of a Quarto document
+
+**Text: Markdown**
+
++-----------------------------------+-------------------------------+
+| Markdown syntax                   | Output                        |
++===================================+===============================+
+|     *italics* and **bold**        | *italics* and **bold**        |
++-----------------------------------+-------------------------------+
+|     superscript^2^ / subscript~2~ | superscript^2^ / subscript~2~ |
++-----------------------------------+-------------------------------+
+|     ~~strikethrough~~             | ~~strikethrough~~             |
++-----------------------------------+-------------------------------+
+|     `verbatim code`               | `verbatim code`               |
++-----------------------------------+-------------------------------+
+
+## Anatomy of a Quarto document
+
+**Code**
+
+````{.markdown filename="my-document.qmd" code-line-numbers=|8-16}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: html
+---
+
+This dataset records Olympic athlete details.
+
+```{{python}}
+from plotnine import ggplot, aes, geom_bar
+
+(
+    ggplot(mpg, aes(x = "country", y = "medals"))
+    + geom_bar()
+)
+```
+
+````
+
+## Anatomy of a Quarto document
+
+**Code**
+
+:::: columns
+::: {.column}
+
+````{.markdown filename="my-document.qmd" code-line-numbers=8-16}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: html
+---
+
+This dataset records Olympic athlete details.
+
+```{{python}}
+from plotnine import ggplot, aes, geom_bar
+
+(
+    ggplot(mpg, aes(x = "country", y = "medals"))
+    + geom_bar()
+)
+```
+
+````
+
+:::
+
+::: {.column}
+* Code chunks begin and end with three backticks (usually)
+* Code chunks are identified with a programming language in between `{}`
+:::
+
+::::
+
+## Anatomy of a Quarto document
+
+**Inline code** executes code *within Markdown*
+
+````{.markdown filename="my-document.qmd"}
+```{{python}}
+medals = 5
+```
+
+The number of medals is `{python} medals`.
+````
+
+Results in:
+
+The number of medals is 5.
+
+## Anatomy of a Quarto document
+
+**Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
+
+````{.markdown code-line-numbers=|9}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: html
+---
+
+This dataset records Olympic athlete details.
+
+```{{python}}
+#| include: false
+from plotnine import ggplot, aes, geom_bar
+
+(
+    ggplot(mpg, aes(x = "country", y = "medals"))
+    + geom_bar()
+)
+```
+
+````
+
+## Anatomy of a Quarto document
+
+**Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
+
+````{.markdown code-line-numbers=9-10}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: html
+---
+
+This dataset records Olympic athlete details.
+
+```{{python}}
+#| include: false
+#| fig.alt: "A scatterplot with country on the x-axis and medals on the y-axis."
+from plotnine import ggplot, aes, geom_bar
+
+(
+    ggplot(mpg, aes(x = "country", y = "medals"))
+    + geom_bar()
+)
+```
+
+````
+
+## Anatomy of a Quarto document
+
+**Code** can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
+
++--------------+------------------------------------------------+
+| Option       | Description                                    |
++==============+================================================+
+| `eval`       | Evaluate the code chunk                        |
++--------------+------------------------------------------------+
+| `echo`       | Include the source code                        |
++--------------+------------------------------------------------+
+| `warning`    | Include warnings                               |
++--------------+------------------------------------------------+
+| `include`    | Include code and results                       |
++--------------+------------------------------------------------+
+
+Other options: <https://quarto.org/docs/computations/execution-options.html>
+
+## Your turn  {background-color='{{< brand color pink >}}' .smaller}
+  
+{{< include 01-exercise01.qmd >}}
+
+```{r}
+#| label: doc-clock-1
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+# Authoring Quarto
+
+## Images and links
+
++------------------------------------+---------------------------------+
+| Markdown syntax                    | Output                          |
++====================================+=================================+
+|     <https://quarto.org>           | <https://quarto.org>            |
++------------------------------------+---------------------------------+
+|     [Quarto](https://quarto.org)   | [Quarto](https://quarto.org)    |
++------------------------------------+---------------------------------+
+|     ![](penguin.jpg)               | ![](penguin.jpg)                |
++------------------------------------+---------------------------------+
+
+## Tables  {.small auto-animate="true"}
+
+``` {{markdown}}
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+```
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+## Tables  {.small auto-animate="true"}
+
+``` {{markdown}}
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+: Table Column Widths {tbl-colwidths="[10,30,30,30]"}
+```
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|    12 | 12   | 12      |   12   |
+|   123 | 123  | 123     |  123   |
+|     1 | 1    | 1       |   1    |
+
+: Table Column Widths {tbl-colwidths="\[10,30,30,30\]"}
+
+## Diagrams
+
+Quarto has native support for embedding Mermaid and Graphviz diagrams.
+
+```{mermaid}
+%%| fig-width: 6
+%%| echo: fenced
+flowchart LR
+  A[1] --> B(2)
+  B --> C{3}
+  C --> D[4]
+  C --> E[5]
+```
+
+::: notes
+There is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it's a pretty handy tool to get to know.
+:::
+
+## Equations
+
+``` {{markdown}}
+$$E = mc^{2}$$
+```
+
+$$E = mc^{2}$$
+
+## Divs and Spans
+
+You can add classes, attributes, and other identifiers to content using Divs and Spans.
+
+**Divs**
+
+    ::: {.border}
+    This content can be styled with a border
+    :::
+    
+**Spans**
+
+    [This is *some text*]{.class key="val"}
+
+[This is *some text*]{.class key="val"}
+
+## Divs
+
+**Callout blocks**
+
+```{.markdown filename="my-document.qmd"}
+:::{.callout-tip}
+
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+
+:::
+```
+
+. . .
+
+::: callout-tip
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+## Divs
+
+**Multiple columns**
+
+```{.markdown filename="my-document.qmd"}
+::: {layout-ncol=2}
+
+![](penguin.jpg)
+
+Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+:::
+```
+
+. . .
+
+::: {layout-ncol="2"}
+![](penguin.jpg)
+
+Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+:::
+
+
+## Divs
+
+**Tabsets**
+
+```{.markdown filename="my-document.qmd"}
+::: {.panel-tabset group="language"}
+## R
+
+`library(dplyr)`
+
+## Python
+
+`import pandas as pd`
+:::
+```
+
+::: {.panel-tabset group="language"}
+## R
+
+`library(dplyr)`
+
+## Python
+
+`import pandas as pd`
+:::
+
+## Spans
+
+```{.markdown filename="my-document.qmd"}
+This is text that is [red]{style="color:red;"}.
+```
+
+This is text that is [red]{style="color:red;"}.
+
+. . .
+
+```{.markdown filename="my-document.qmd"}
+![](penguin.jpg){fig-alt="A photo of a penguin jumping"}
+```
+
+![](penguin.jpg){fig-alt="A photo of a penguin jumping"}
+
+# Changing formats
+
+## Changing formats
+
+:::: columns
+::: {.column}
+
+````{.markdown code-line-numbers=3 filename="my-document.qmd"}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: revealjs
+---
+````
+:::
+
+::: {.column .fragment}
+![](../images/revealjs.png)
+:::
+::::
+
+## Changing formats
+
+:::: columns
+::: {.column}
+
+````{.markdown code-line-numbers=3 filename="my-document.qmd"}
+---
+title: "Quarto---To Tell Your Story with Data"
+format: pdf
+---
+````
+:::
+
+::: {.column .fragment}
+![](../images/pdf.png)
+:::
+::::
+
+## Your turn  {background-color='{{< brand color pink >}}' .smaller}
+  
+{{< include 01-exercise02.qmd >}}
+
+```{r}
+#| label: doc-clock-2
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+# Wrap up
+
+## A tour of Quarto
+
+::: demo
+-   Anatomy of a Quarto document
+-   Using Quarto in editors
+-   Creating Quarto documents (metadata, markdown text, and code)
+-   Changing formats
+:::

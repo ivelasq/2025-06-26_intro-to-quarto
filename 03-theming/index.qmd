@@ -1,0 +1,16 @@
+---
+title: "03 - Styling Quarto"
+backgroundcolor: "white"
+---
+
+## Slides
+
+[View slides in full screen](03-slides.html)
+
+```{=html}
+<iframe class="slide-deck" src="03-slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+## Exercises
+
+{{< include 03-exercise.qmd >}}

@@ -1,0 +1,379 @@
+---
+title: "Intro to Quarto"
+subtitle: "To Tell Your Story with Data"
+format: 
+  revealjs:
+    transition: fade
+    background-transition: fade
+    theme: ../style.scss
+filters:
+  - reveal-auto-agenda
+---
+
+# Welcome
+
+## About me
+
+<center>
+
+<img src="../images/profile.jpg" style="border-radius: 50%;" width="250px"/>
+
+[{{< fa brands github >}} ivelasq](https://github.com/ivelasq)
+
+[{{< fa brands linkedin >}} ivelasq](https://www.linkedin.com/in/ivelasq/)
+
+[{{< fa link >}} ivelasq.rbind.io](https://ivelasq.rbind.io)
+
+[{{< fa brands bluesky >}} ivelasq3](https://bsky.app/profile/ivelasq3.bsky.social)
+</center>
+
+## About you
+
+::: your-turn
+Please share in the chat...
+
+- Your name
+- Your professional affiliation
+- What you produce with data (reports, dashboards, etc.)
+
+:::
+
+## About this workshop
+
+::::::: columns
+:::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+These materials are pitched at someone who:
+
+* knows some R or Python 
+* has R or Python installed
+* creates documents that display output from code
+* may be familiar new to Markdown and Quarto
+:::
+::::
+
+:::: {.column width="50%"}
+::: {.fragment .fade-in}
+
+What you will walk away with:
+
+* An introductory knowledge of Quarto and its benefits
+* Examples of documents with code
+:::
+::::
+:::::::
+
+## Workshop structure
+
+::::::: columns
+::: {.column .fragment width="33%"}
+**My turn**
+
+-   Lecture segments
+-   Feel free to just watch, take notes, browse docs, or tinker around with the code
+:::
+
+:::: {.column .fragment width="33%"}
+::: our-turn
+**Our turn**
+
+-   Lecture segments + live coding
+-   (Optionally) follow along with live coding
+:::
+::::
+
+:::: {.column .fragment width="33%"}
+::: your-turn
+**Your turn**
+
+- Practice exercises for you
+- Ask questions in the chat if you run into issues
+:::
+::::
+::::::::
+
+## Instructions
+
+::: incremental
+
+* Workshop website: [bit.ly/gasp2025-quarto](https://pbit.ly/gasp2025-quarto)
+* Workshop exercise repo: <https://github.com/ivelasq/gasp2025-quarto-exercises>
+
+:::
+
+# Introduction to Quarto
+
+## What is Quarto®? {auto-animate="true"}
+
+<center>
+
+Quarto® is an
+
+::: {.fragment .grow .semi-fade-out}
+open-source
+:::
+
+::: {.fragment .grow .semi-fade-out}
+scientific and technical
+:::
+
+::: {.fragment .grow .semi-fade-out}
+publishing system
+:::
+
+::: {.fragment .grow .semi-fade-out}
+built on Pandoc.
+:::
+
+</center>
+
+## With Quarto...
+
+you can weave together narrative and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.
+
+::: incremental
+-   Create dynamic content with Python, R, Julia, and Observable
+-   Edit documents in your favorite editor
+-   Publish technical content in HTML, PDF, MS Word, and more
+-   Share technical content by publishing to Posit Connect, Confluence, or other publishing systems
+:::
+
+## "Literate programming"
+
+![](../images/literate-programming.png){fig-align="center"}
+
+::: notes
+Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
+:::
+
+## Why Quarto?
+
+::: incremental
+- Multilingual and independent of computational systems
+- Consistent expression for core features
+- Enable “single-source publishing” — create Word, PDFs, HTML, etc. from one source
+- Use defaults that meet accessibility guidelines
+- Quarto comes **"batteries included"** straight out of the box
+:::
+
+## Why Quarto for telling stories with data?
+
+::::::: columns
+:::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+A good story is...
+
+* Clear
+* Credible
+* Provides context
+* Credible
+:::
+::::
+
+:::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+Quarto allows you to...
+
+* Use many formats for telling your story
+* Reproduce and automate results
+* Mix code and narrative together
+* Add footnotes, cross-references
+:::
+::::
+:::::
+
+## Quarto formats {.smaller}
+
+| Feature | Quarto |
+|--------------------------|----------------------------------------------|
+| Basic Formats | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
+| Beamer | [beamer](https://quarto.org/docs/presentations/beamer.html) |
+| PowerPoint | [pptx](https://quarto.org/docs/presentations/powerpoint.html) |
+| HTML Slides | [revealjs](https://quarto.org/docs/presentations/revealjs/) |
+| Advanced Layout | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) |
+| Cross References | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html) |
+| Websites & Blogs | [Quarto Websites](https://quarto.org/docs/websites/), [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html) |
+| Books | [Quarto Books](https://quarto.org/docs/books/) |
+| Interactivity | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/) |
+| Journal Articles | [Journal Articles](https://quarto.org/docs/journals/index.html) |
+| Dashboards | [Quarto Dashboards](https://quarto.org/docs/dashboards/) |
+
+: {tbl-colwidths="\[25,75\]"}
+
+## Quarto capabilities
+
+Built for technical documents:
+
+    Cross references
+    Advanced layout
+    Figure/layout panels
+    Callouts
+    Diagrams
+    Extensions
+    Interactivity
+    YAML intelligence
+    Publishing
+    Conditional content
+    Notebook filters
+
+## Display data and results {.smaller}
+
+[Vote Idaho Election Page](https://results.voteidaho.gov){preview-link="true"} by Andrew Heiss and the Idaho Secretary of State
+
+[![](../images/id-elections.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://fosstodon.org/@andrew@fediscience.org/112485099746718354)
+
+::: notes
+Andrew Heiss, in conjunction with the Idaho Secretary of State's office, created a Quarto website for their primary election results.
+:::
+
+## Display data and results {.smaller}
+
+[Health Trends in England](https://fingertips.phe.org.uk/static-reports/health-trends-in-england/England/overview.html){preview-link="true"} by the  Department of Health & Social Care
+
+[![](../images/england-health.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://bsky.app/profile/statsgeekclare.bsky.social/post/3ld6iwagnzs2m)
+
+::: notes
+Health Trends 
+:::
+
+## Walk through a story {.smaller}
+
+[Council Housing & Neighborhood Income Inequality in Vienna](https://mschnetzer.github.io/scrollytell_gemeindebau/){preview-link="true"} by Tamara Premrov and Matthias Schnetzer, European Centre for Social Welfare Policy and Research, Austria
+
+<center><script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/izl69pu9ua.js" async type="module"></script><style>wistia-player[media-id='izl69pu9ua']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/izl69pu9ua/swatch'); display: block; filter: blur(5px); }</style> <wistia-player media-id="izl69pu9ua" aspect="1.7777777777777777" style="width: 800px;height: 463px;"></wistia-player></center>
+
+## Publish papers {.smaller}
+
+::::::: columns
+:::: {.column width="50%"}
+
+[Navigating Hostility: The Effect of Nonprofit Transparency and Accountability on Donor Preferences in the Face of Shrinking Civic Space](https://stats.andrewheiss.com/silent-skywalk/manuscript/output/manuscript.html){preview-link="true"} by Suparna Chaudhry (Lewis & Clark College, International Justice Lab at College of William & Mary) et al.
+::::
+
+:::: {.column width="50%"}
+![](../images/manuscript.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+::::
+:::::
+
+## Automate and reproduce your output {.smaller}
+
+[Duplicating Quarto elements with code templates to reduce copy and paste errors](https://waterdata.usgs.gov/blog/quarto-template-demo/){preview-link="true"} by Althea A. Archer, United States Geological Survey
+
+![](../images/quarto_template_overview.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::: notes
+With Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There's a software engineering concept called the DRY Principle ("Don't Repeat Yourself") that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain.
+:::
+
+## Get your team on the same page {.smaller}
+
+[We Converted Our Documentation to Quarto](https://melissavanbussel.quarto.pub/posit-conf-2023/#/section), Melissa Van Bussel, Statistics Canada
+
+::::::: columns
+:::: {.column width="80%"}
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/zjPdBDyIyJ8?si=OIKzKvhMgzr77RFz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+::::
+
+:::: {.column width="20%"}
+* Website for R/Python User Group
+* Training resources
+* Presentations
+::::
+:::::
+
+## ️Wrap Up {background-image="../images/quarto-chat.jpg" background-color="#2b3d5b"}
+
+Quarto + Communication = ❤
+
+# Getting Started
+
+## Installation
+
+![](../images/getting-started.png){width=80% fig-align="center"}
+
+::: aside
+[quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+:::
+
+## Tools for authoring
+
+::: {layout-ncol="3" align="center"}
+
+![](../images/positron-logo.png){width="160"}
+
+![](https://quarto.org/docs/get-started/images/rstudio-logo.png){width="160"}
+
+![](https://quarto.org/docs/get-started/images/vscode-logo.png){width="160"}
+
+![](https://quarto.org/docs/get-started/images/jupyter-logo.png){width="160"}
+
+![](https://quarto.org/docs/get-started/images/text-editor-logo.png){width="160"}
+
+:::
+
+```{.bash filename="Terminal"}
+quarto render
+```
+
+## Our turn {background-color='{{< brand color light-blue >}}'}
+
+### Quarto workflow
+
+* Open the `.qmd` file.
+* Preview/render the document.
+* Make changes and preview/render again.
+
+::::: columns
+:::: {.column width="50%"}
+![](../images/rstudio-preview.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+::::
+
+:::: {.column width="50%"}
+![](../images/positron-preview.png){ style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+::::
+:::::
+
+## Your turn {background-color='{{< brand color pink >}}'}
+
+Go to the workshop website and click on `Introduction` in the sidebar.
+
+<br>
+
+<center>[bit.ly/gasp2025-quarto](https://bit.ly/gasp2025-quarto)</center>
+
+<br>
+
+Follow the setup instructions at the bottom.
+
+```{r}
+#| label: intro-clock
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+## Why is it called "Quarto"?
+
+::: columns
+::: {.column width="60%"}
+::: {style="font-size:28px"}
+"Quarto is the format of a book or<br>pamphlet produced from full sheets<br>printed with eight pages of text, four to a<br>side, then folded twice to produce four leaves."
+
+--- Wikipedia
+:::
+:::
+
+:::
+
+![](../images/quarto-book.png){fig-align="center"}
+
+::: aside
+Image: [The Perfect Gift for Family and Friends Is a Homemade Book](https://medium.com/swlh/impressing-my-family-and-friends-with-a-homemade-book-a02432a0a41a)
+:::
+
+::: notes
+According to the website, the developers wanted to use a name that had meaning in the history of publishing and ulitimately landed on Quarto. A quarto is an 8-page double-sided booklet, made by folding a single sheet of paper into four sections.
+:::

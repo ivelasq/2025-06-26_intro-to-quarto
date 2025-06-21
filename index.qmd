@@ -1,0 +1,27 @@
+---
+title: Quarto---To Tell Your Story with Data
+subtitle: Government Advances in Statistical Programming (GASP) 2025
+backgroundcolor: "white"
+---
+
+🗓️ Date: 26 June 2025
+
+🕗 Time: 10:30 - 11:45 ET
+
+## Abstract
+
+Join us for a 75-minute introduction to [Quarto](https://quarto.org), the next-generation scientific and technical publishing system. In this workshop, you'll learn the fundamentals of Quarto. We'll cover document creation, code integration, and output customization, equipping you to build your own Quarto documents.
+
+## Overview
+
+Sharing knowledge through writing is a critical aspect of the public sector. It allows you to communicate your findings and insights to a broader audience, build upon existing work, and collaborate with others in your field. Quarto, an innovative, open-source scientific and technical publishing system, provides data practitioners with a better way to share results and insights: one that's clear, reproducible, and tailored to your audience. Whether you're creating reports, dashboards, or presentations, Quarto helps you tell a complete data story with transparency and impact.
+
+## Instructor
+
+[Isabella Velásquez](https://ivelasq.rbind.io) is a Senior Product Marketing Manager at Posit Software, where she develops strategic content to increase brand visibility and drive product adoption. She has a background in data analysis, reporting, and visualization and holds an MS in Analytics and a BA in Economics and East Asian Languages and Civilizations from the University of Chicago.
+
+[{{< fa brands linkedin >}}](https://www.linkedin.com/in/ivelasq/) [{{< fa brands github >}}](https://github.com/ivelasq) [{{< fa brands bluesky >}}](https://bsky.app/profile/ivelasq3.bsky.social) [{{< fa brands mastodon >}}](https://fosstodon.org/@ivelasq3) 
+
+------------------------------------------------------------------------
+
+![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

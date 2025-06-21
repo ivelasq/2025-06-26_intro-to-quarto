@@ -1,0 +1,19 @@
+{
+  "hash": "7b7382af5c5d79242aae998b96315dae",
+  "result": {
+    "engine": "knitr",
+    "markdown": "In the workshop repo, there is a file called `04-exercise.yml`. Rename the file to `_brand.yml` and rerun your Quarto document.\n\nChange some of the variables in the `_brand.yml` file and rerun to see how your theme changes.\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"countdown\" id=\"timer_63b063fd\" data-warn-when=\"60\" data-update-every=\"1\" data-play-sound=\"true\" tabindex=\"0\" style=\"right:0;bottom:0;\">\n<div class=\"countdown-controls\"><button class=\"countdown-bump-down\">&minus;</button><button class=\"countdown-bump-up\">&plus;</button></div>\n<code class=\"countdown-time\"><span class=\"countdown-digits minutes\">05</span><span class=\"countdown-digits colon\">:</span><span class=\"countdown-digits seconds\">00</span></code>\n</div>\n```\n\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../site_libs/countdown-0.4.0/countdown.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/countdown-0.4.0/countdown.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

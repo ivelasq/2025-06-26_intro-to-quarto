@@ -1,0 +1,7 @@
+If you have a GitHub account and have cloned the workshop repo, sign up for a free Posit Connect Cloud account: <https://connect.posit.cloud/>
+
+* Click the blue "Publish" button.
+* Select "Quarto".
+* Select your workshop repository.
+* Select `publish-dashboard` as the branch.
+* Click "Publish".

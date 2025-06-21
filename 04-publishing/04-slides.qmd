@@ -1,0 +1,57 @@
+---
+title: "Publishing Quarto"
+format: 
+  revealjs:
+    transition: fade
+    background-transition: fade
+    theme: ../style.scss
+filters:
+  - reveal-auto-agenda
+---
+
+## Publishing options
+
+Quarto documents are typically just static HTML pages so can be deployed to any web server or web host.
+
+-   [Posit Connect Cloud](https://connect.posit.cloud/)
+-   [GitHub Pages](https://pages.github.com/)
+-   [Quarto Pub](https://quartopub.com/)
+-   [Posit Connect](https://posit.co/products/enterprise/connect/)
+
+::: aside
+[Publishing Quarto documentation](https://quarto.org/docs/publishing/)
+:::
+
+## Posit Connect Cloud
+
+![](../images/pcc.png){fig-align="center"}
+
+[https://connect.posit.cloud/](https://connect.posit.cloud/)
+
+Easily publish and share data applications and documents in a cloud environment within minutes.
+
+## Your turn {background-color='{{< brand color pink >}}'}
+
+{{< include 04-exercise.qmd >}}
+
+```{r}
+#| label: publishing-clock
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+## Wrap Up {background-image="../images/quarto-chat.jpg" background-color="#2b3d5b"}
+
+## Time for Q&A! {.center}
+
+## Learning more
+
+|                   |                                                                        |
+|-------------------------|-----------------------------------------------|
+| About Quarto      | <https://quarto.org/>                                                  |
+| Quarto Automation | <https://jadeyryan.quarto.pub/slc-rug-quarto/#/title-slide>            |
+| Quarto Dashboards | <https://jadeyryan.quarto.pub/slc-rug-quarto/#/title-slide>            |
+| Quarto Websites   | <https://jadeyryan.quarto.pub/slc-rug-quarto/#/title-slide>            |
+
+## Thank you! {.center}

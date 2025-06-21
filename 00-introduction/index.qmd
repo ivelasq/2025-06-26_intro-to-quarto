@@ -1,0 +1,16 @@
+---
+title: "00 - Welcome and Introduction"
+backgroundcolor: "white"
+---
+
+## Slides
+
+[View slides in full screen](00-slides.html)
+
+```{=html}
+<iframe class="slide-deck" src="00-slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+## Set Up Instructions
+
+{{< include 00-exercises.qmd >}}

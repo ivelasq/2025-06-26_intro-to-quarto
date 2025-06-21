@@ -1,0 +1,155 @@
+---
+title: "Theming Quarto"
+format: 
+  revealjs:
+    transition: fade
+    background-transition: fade
+    theme: ../style.scss
+filters:
+  - reveal-auto-agenda
+---
+
+## HTML Theming {.scrollable}
+
+Quarto includes 25 themes from the [Bootswatch](https://bootswatch.com/) project:
+
+-   default
+-   cerulean
+-   cosmo
+-   cyborg
+-   darkly
+-   flatly
+-   journal
+-   litera
+-   lumen
+-   lux
+-   materia
+-   minty
+-   morph
+-   pulse
+-   quartz
+-   sandstone
+-   simplex
+-   sketchy
+-   slate
+-   solar
+-   spacelab
+-   superhero
+-   united
+-   vapor
+-   yeti
+-   zephyr
+
+## How to Apply HTML Theming
+
+Provide the custom theme under `theme` in the YAML heading:
+
+````{.markdown filename="my-document.qmd"}
+---
+theme:
+  - flatly
+---
+````
+
+## However, we usually want to use our organization's theme
+
+![](../images/flyer.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+
+## Introducing brand.yml
+
+![](../images/brand-yml.png){fig-align="center" width="50%"}
+
+Create reports, apps, dashboards, plots and more that match your company’s brand guidelines with a single `_brand.yml` file.
+
+::: aside
+[brand.yml documentation](https://posit-dev.github.io/brand-yml/), [Quarto documentation](https://quarto.org/docs/authoring/brand.html)
+:::
+::: notes
+brand.yml is a simple, portable YAML file that codifies your company’s brand guidelines into a format that can be used by Quarto, Python and R tooling to create branded outputs. Our goal is to support unified, branded theming for all of Posit’s open source tools—from web applications to printed reports to dashboards and presentations—with a consistent look and feel.
+:::
+
+## brand.yml elements
+
+* `meta`: Identifying information, name of the company, URLs, etc.
+* `logo`: Files or links to the brand’s logos.
+* `color`: Colors in the brand's color palette. 
+* `typography`: Fonts for different elements. 
+* `defaults`: Additional context-specific settings.
+
+## `_brand.yml` structure
+
+```{.yaml code-line-numbers="1-4|6-7|9-20|22-39" filename="_brand.yml"}
+meta: 
+  name: Example Company
+  link: 
+    github: https://github.com/example-company
+
+logo: 
+  medium: logos/logo.png
+
+color:
+  palette:
+    black: "#1C2826"
+    blue: "#0C0A3E" 
+    neutral: "#F9F7F1" 
+    red: "#BA274A"
+    violet: "#4D6CFA"
+  background: neutral
+  foreground: black
+  primary: blue
+  secondary: violet
+  danger: red
+
+typography:
+  fonts:
+    - family: Nunito Sans
+      source: google
+    - family: Montserrat
+      source: google
+    - family: Fira Code
+      source: google
+
+  base: Nunito Sans
+  headings:
+    family: Montserrat
+    weight: 700
+    color: primary
+  monospace: Fira Code
+  link:
+    color: danger
+    decoration: underline
+```
+
+## How to apply brand.yml automatically
+
+1. Define branding in a single` _brand.yml` file.
+2. Save in the root directory of your Quarto project (alongside `_quarto.yml`)
+
+Quarto will detect the presence of `_brand.yml` and automatically apply the brand to all documents of the supported formats in the project.
+
+## Specify light and dark themes
+
+You can now specify a light and dark brand. For example, at a project-level you can provide two brand files:
+
+```{.yaml filename="_quarto.yml"}
+brand:
+  light: light-brand.yml
+  dark: dark-brand.yml
+```
+
+## Your turn {background-color='{{< brand color pink >}}'}
+
+{{< include 03-exercise.qmd >}}
+
+```{r}
+#| label: brand-clock
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+## Learn more {.smaller}
+
+I gave a 1-hour talk at R-Ladies Rome on branding Quarto with brand.yml. Check it and the documentation out for more details!
+
+<center><iframe width="800" height="450" src="https://www.youtube.com/embed/mTuhQ64P3qc?si=DOMIXyiS1imTe1Ja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
