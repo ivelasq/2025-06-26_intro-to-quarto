@@ -1,3 +1,6 @@
+* Open `01-exercise-r.qmd` and preview the file:
+  * In RStudio, click the Render button.
+  * In Positron or VS Code, click the "Preview" button or press **Command** + **Shift** + **P**.
 * Add a `#| include: false` chunk option to the first cell. Preview the file and note the differences.
 * In the YAML, add an `author` field and add your name. Preview the file.
 * Change `code-fold` to be `true`. Preview the file.

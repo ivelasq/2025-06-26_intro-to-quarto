@@ -322,28 +322,9 @@ Photo by <a href="https://unsplash.com/@kellysikkema?utm_content=creditCopyText&
 quarto render
 ```
 
-## Our turn {background-color='{{< brand color light-blue >}}'}
-
-### Quarto workflow
-
-* Open the `.qmd` file.
-* Preview/render the document.
-* Make changes and preview/render again.
-
-::::: columns
-:::: {.column width="50%"}
-![](../images/rstudio-preview.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
-::::
-
-:::: {.column width="50%"}
-![](../images/positron-preview.png){ style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
-
-::::
-:::::
-
 ## Your turn {background-color='{{< brand color pink >}}'}
 
-Go to the workshop website and click on `Introduction` in the sidebar.
+Go to the workshop website and click on `00 - Introduction` in the sidebar.
 
 <br>
 
@@ -354,7 +335,34 @@ Go to the workshop website and click on `Introduction` in the sidebar.
 Follow the setup instructions at the bottom.
 
 ```{r}
-#| label: intro-clock
+#| label: intro-clock1
+#| echo: false
+# 5 minutes, warning at 1 minute
+countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
+```
+
+## Our turn: Quarto workflow {background-color='{{< brand color light-blue >}}'}
+
+* Open a `.qmd` file.
+* Preview/render the document.
+* Make a change and preview/render again.
+
+::::: columns
+:::: {.column width="40%"}
+![](../images/rstudio-preview.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+::::
+
+:::: {.column width="40%"}
+![](../images/positron-preview.png){ style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
+::::
+:::::
+
+## Your turn {background-color='{{< brand color pink >}}'}
+
+{{< include 00-exercises02.qmd >}}
+
+```{r}
+#| label: intro-clock2
 #| echo: false
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)

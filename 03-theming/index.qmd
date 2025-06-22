@@ -11,6 +11,6 @@ backgroundcolor: "white"
 <iframe class="slide-deck" src="03-slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-## Exercises
+## Exercise 1
 
 {{< include 03-exercise.qmd >}}

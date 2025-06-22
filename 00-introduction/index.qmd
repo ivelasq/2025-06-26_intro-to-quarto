@@ -13,4 +13,8 @@ backgroundcolor: "white"
 
 ## Set Up Instructions
 
-{{< include 00-exercises.qmd >}}
+{{< include 00-exercises01.qmd >}}
+
+## Exercise 1
+
+{{< include 00-exercises02.qmd >}}

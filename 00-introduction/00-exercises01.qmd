@@ -15,7 +15,8 @@ While Quarto itself doesn't require a programming language, the exercises will i
 * Requires a free account at <https://github.com/>
 * Go to the GitHub repo: <https://github.com/ivelasq/gasp2025-quarto-codespace>
 * Click "Use this template" then "Open in a codespace"
-  * Please note that loading the codespace may take a few minutes.
+  * Please note that loading the codespace will take a few minutes.
+  * If you are asked to install an extension called markdownlit, say "yes" and trust the publisher.
 
 **Option 3: Local Installation**
 
@@ -81,9 +82,3 @@ pak::pak(c("dplyr", "ggplot2", "here", "janitor", "knitr", "readr", "scales"))
 - Choose an interpreter path
 - Select `requirements.txt` check box to install dependencies
 :::
-
-### Preview your first document
-
-* Open `01-exercise-r.qmd` and preview the file:
-  * In RStudio, click the Render button.
-  * In Positron or VS Code, click the "Preview" button or press **Command** + **Shift** + **P**.
