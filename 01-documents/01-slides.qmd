@@ -34,7 +34,7 @@ filters:
 
 ````{.markdown filename="my-document.qmd"}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: html
 ---
 ````
@@ -56,11 +56,11 @@ format: html
 
 ````{.markdown filename="my-document.qmd"}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: html
 ---
 
-This dataset records Olympic athlete details.
+This analysis explores the National Inventory of Dams (NID) dataset.
 ````
 
 . . .
@@ -76,13 +76,13 @@ This dataset records Olympic athlete details.
 <div class="sourceCode">
 <pre class="sourceCode markdown">
 <code class="sourceCode markdown">
-The `olympic.csv` dataset records [**Olympic**](https://en.wikipedia.org/wiki/Olympic_Games) athlete details.
+The `nation.csv` dataset records the [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) information.
 </code>
 </pre>
 </div>
 ```
 
-The `olympic.csv` dataset records [**Olympic**](https://en.wikipedia.org/wiki/Olympic_Games) athlete details.
+The `nation.csv` dataset records [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) information.
 
 ## Anatomy of a Quarto document
 
@@ -104,19 +104,19 @@ The `olympic.csv` dataset records [**Olympic**](https://en.wikipedia.org/wiki/Ol
 
 **Code**
 
-````{.markdown filename="my-document.qmd" code-line-numbers=|8-16}
+````{.markdown filename="my-document.qmd" code-line-numbers=|8-15}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: html
 ---
 
-This dataset records Olympic athlete details.
+This is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.
 
 ```{{python}}
 from plotnine import ggplot, aes, geom_bar
 
 (
-    ggplot(mpg, aes(x = "country", y = "medals"))
+    ggplot(mpg, aes(x = "state", y = "dams"))
     + geom_bar()
 )
 ```
@@ -130,19 +130,19 @@ from plotnine import ggplot, aes, geom_bar
 :::: columns
 ::: {.column}
 
-````{.markdown filename="my-document.qmd" code-line-numbers=8-16}
+````{.markdown filename="my-document.qmd" code-line-numbers=8-15}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: html
 ---
 
-This dataset records Olympic athlete details.
+This is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.
 
 ```{{python}}
 from plotnine import ggplot, aes, geom_bar
 
 (
-    ggplot(mpg, aes(x = "country", y = "medals"))
+    ggplot(mpg, aes(x = "state", y = "dams"))
     + geom_bar()
 )
 ```
@@ -164,15 +164,15 @@ from plotnine import ggplot, aes, geom_bar
 
 ````{.markdown filename="my-document.qmd"}
 ```{{python}}
-medals = 5
+dams = 92428
 ```
 
-The number of medals is `{python} medals`.
+The number of dams is `{python} dams`.
 ````
 
 Results in:
 
-The number of medals is 5.
+The number of dams is 92428.
 
 ## Anatomy of a Quarto document
 
@@ -180,18 +180,18 @@ The number of medals is 5.
 
 ````{.markdown code-line-numbers=|9}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: html
 ---
 
-This dataset records Olympic athlete details.
+This is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.
 
 ```{{python}}
 #| include: false
 from plotnine import ggplot, aes, geom_bar
 
 (
-    ggplot(mpg, aes(x = "country", y = "medals"))
+    ggplot(mpg, aes(x = "state", y = "dams"))
     + geom_bar()
 )
 ```
@@ -204,19 +204,19 @@ from plotnine import ggplot, aes, geom_bar
 
 ````{.markdown code-line-numbers=9-10}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: html
 ---
 
-This dataset records Olympic athlete details.
+This is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.
 
 ```{{python}}
 #| include: false
-#| fig.alt: "A scatterplot with country on the x-axis and medals on the y-axis."
+#| fig.alt: "A scatterplot with state on the x-axis and dams on the y-axis."
 from plotnine import ggplot, aes, geom_bar
 
 (
-    ggplot(mpg, aes(x = "country", y = "medals"))
+    ggplot(mpg, aes(x = "state", y = "dams"))
     + geom_bar()
 )
 ```
@@ -263,7 +263,7 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 +------------------------------------+---------------------------------+
 |     [Quarto](https://quarto.org)   | [Quarto](https://quarto.org)    |
 +------------------------------------+---------------------------------+
-|     ![](penguin.jpg)               | ![](penguin.jpg)                |
+|     ![](dam.jpg)                   | ![](dam.jpg)                    |
 +------------------------------------+---------------------------------+
 
 ## Tables  {.small auto-animate="true"}
@@ -370,18 +370,18 @@ Note that there are five types of callouts, including: `note`, `tip`, `warning`,
 ```{.markdown filename="my-document.qmd"}
 ::: {layout-ncol=2}
 
-![](penguin.jpg)
+![](dam.jpg)
 
-Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/@dmey503?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dan Meyers</a> on <a href="https://unsplash.com/photos/aerial-photography-of-body-of-water-w6X7XaolqA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 :::
 ```
 
 . . .
 
 ::: {layout-ncol="2"}
-![](penguin.jpg)
+![](dam.jpg)
 
-Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/@dmey503?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dan Meyers</a> on <a href="https://unsplash.com/photos/aerial-photography-of-body-of-water-w6X7XaolqA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 :::
 
 
@@ -422,10 +422,10 @@ This is text that is [red]{style="color:red;"}.
 . . .
 
 ```{.markdown filename="my-document.qmd"}
-![](penguin.jpg){fig-alt="A photo of a penguin jumping"}
+![](dam.jpg){fig-alt="A photo of a dam in Detroit"}
 ```
 
-![](penguin.jpg){fig-alt="A photo of a penguin jumping"}
+![](dam.jpg){fig-alt="A photo of a dam in Detroit"}
 
 # Changing formats
 
@@ -436,7 +436,7 @@ This is text that is [red]{style="color:red;"}.
 
 ````{.markdown code-line-numbers=3 filename="my-document.qmd"}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: revealjs
 ---
 ````
@@ -454,7 +454,7 @@ format: revealjs
 
 ````{.markdown code-line-numbers=3 filename="my-document.qmd"}
 ---
-title: "Quarto---To Tell Your Story with Data"
+title: "The Story of America's Dam Infrastructure"
 format: pdf
 ---
 ````
@@ -475,14 +475,3 @@ format: pdf
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
-
-# Wrap up
-
-## A tour of Quarto
-
-::: demo
--   Anatomy of a Quarto document
--   Using Quarto in editors
--   Creating Quarto documents (metadata, markdown text, and code)
--   Changing formats
-:::

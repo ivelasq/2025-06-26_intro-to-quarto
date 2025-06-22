@@ -76,11 +76,11 @@
     ]
   },
   {
-    "objectID": "03-theming/index.html#exercises",
-    "href": "03-theming/index.html#exercises",
+    "objectID": "03-theming/index.html#exercise-1",
+    "href": "03-theming/index.html#exercise-1",
     "title": "03 - Theming Quarto",
-    "section": "Exercises",
-    "text": "Exercises\nIn the workshop repo, there is a file called 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document.\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nIn the workshop repo, there is a file called 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document.\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.",
     "crumbs": [
       "03 - Theming"
     ]
@@ -106,11 +106,11 @@
     ]
   },
   {
-    "objectID": "02-projects/index.html#exercise",
-    "href": "02-projects/index.html#exercise",
+    "objectID": "02-projects/index.html#exercise-1",
+    "href": "02-projects/index.html#exercise-1",
     "title": "02 - Quarto Projects",
-    "section": "Exercise",
-    "text": "Exercise\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml.\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML!\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”.",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml.\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML!\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”.",
     "crumbs": [
       "02 - Projects"
     ]
@@ -134,21 +134,21 @@
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-2",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nMetadata: YAML\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: html\n---\n\n\n\n“Yet another markup language”\nMetadata of your document\nDemarcated by three dashes (---) on either end\nUses key-value pairs in the format key: value"
+    "text": "Anatomy of a Quarto document\nMetadata: YAML\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\n\n\n“Yet another markup language”\nMetadata of your document\nDemarcated by three dashes (---) on either end\nUses key-value pairs in the format key: value"
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-3",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-3",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nText: Markdown\n\n\nmy-document.qmd\n\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: html\n---\n\nThis dataset records Olympic athlete details.\n\n\n\nMarkdown is a lightweight language for creating formatted text\nQuarto is based on Pandoc and uses its variation of markdown as its underlying document syntax"
+    "text": "Anatomy of a Quarto document\nText: Markdown\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis analysis explores the National Inventory of Dams (NID) dataset.\n\n\n\nMarkdown is a lightweight language for creating formatted text\nQuarto is based on Pandoc and uses its variation of markdown as its underlying document syntax"
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-4",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-4",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nText: Markdown\n\n\nThe `olympic.csv` dataset records [**Olympic**](https://en.wikipedia.org/wiki/Olympic_Games) athlete details.\n\n\n\nThe olympic.csv dataset records Olympic athlete details."
+    "text": "Anatomy of a Quarto document\nText: Markdown\n\n\nThe `nation.csv` dataset records the [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) information.\n\n\n\nThe nation.csv dataset records National Inventory of Dams (NID) information."
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-5",
@@ -162,35 +162,35 @@
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-6",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nCode\n\n\nmy-document.qmd\n\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: html\n---\n\nThis dataset records Olympic athlete details.\n\n```{python}\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"country\", y = \"medals\"))\n    + geom_bar()\n)\n```"
+    "text": "Anatomy of a Quarto document\nCode\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```"
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-7",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-7",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nCode\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: html\n---\n\nThis dataset records Olympic athlete details.\n\n```{python}\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"country\", y = \"medals\"))\n    + geom_bar()\n)\n```\n\n\n\nCode chunks begin and end with three backticks (usually)\nCode chunks are identified with a programming language in between {}"
+    "text": "Anatomy of a Quarto document\nCode\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```\n\n\n\nCode chunks begin and end with three backticks (usually)\nCode chunks are identified with a programming language in between {}"
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-8",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-8",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nInline code executes code within Markdown\n\n\nmy-document.qmd\n\n```{python}\nmedals = 5\n```\n\nThe number of medals is `{python} medals`.\n\nResults in:\nThe number of medals is 5."
+    "text": "Anatomy of a Quarto document\nInline code executes code within Markdown\n\n\nmy-document.qmd\n\n```{python}\ndams = 92428\n```\n\nThe number of dams is `{python} dams`.\n\nResults in:\nThe number of dams is 92428."
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-9",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-9",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: html\n---\n\nThis dataset records Olympic athlete details.\n\n```{python}\n#| include: false\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"country\", y = \"medals\"))\n    + geom_bar()\n)\n```"
+    "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\n#| include: false\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```"
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-10",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-10",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: html\n---\n\nThis dataset records Olympic athlete details.\n\n```{python}\n#| include: false\n#| fig.alt: \"A scatterplot with country on the x-axis and medals on the y-axis.\"\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"country\", y = \"medals\"))\n    + geom_bar()\n)\n```"
+    "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\n#| include: false\n#| fig.alt: \"A scatterplot with state on the x-axis and dams on the y-axis.\"\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```"
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-11",
@@ -204,14 +204,14 @@
     "href": "01-documents/01-slides.html#your-turn",
     "title": "Quarto Documents",
     "section": "Your turn",
-    "text": "Your turn\n\nOpen 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values:\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nOpen 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of dams:\n\n\nRPython\n\n\n\n`r format(nrow(dat), big.mark = \",\")`\n\n\n\n\n`{python} f\"{total_dams:,}\"`\n\n\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "01-documents/01-slides.html#images-and-links",
     "href": "01-documents/01-slides.html#images-and-links",
     "title": "Quarto Documents",
     "section": "Images and links",
-    "text": "Images and links\n\n\n\nMarkdown syntax\nOutput\n\n\n\n\n&lt;https://quarto.org&gt;\nhttps://quarto.org\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![](penguin.jpg)"
+    "text": "Images and links\n\n\n\nMarkdown syntax\nOutput\n\n\n\n\n&lt;https://quarto.org&gt;\nhttps://quarto.org\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![](dam.jpg)"
   },
   {
     "objectID": "01-documents/01-slides.html#tables",
@@ -260,7 +260,7 @@
     "href": "01-documents/01-slides.html#divs-1",
     "title": "Quarto Documents",
     "section": "Divs",
-    "text": "Divs\nMultiple columns\n\n\nmy-document.qmd\n\n::: {layout-ncol=2}\n\n![](penguin.jpg)\n\nPhoto by &lt;a href=\"https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\"&gt;Cornelius Ventures&lt;/a&gt; on &lt;a href=\"https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\"&gt;Unsplash&lt;/a&gt;\n:::\n\n\n\n\n\n\n\n\nPhoto by Cornelius Ventures on Unsplash"
+    "text": "Divs\nMultiple columns\n\n\nmy-document.qmd\n\n::: {layout-ncol=2}\n\n![](dam.jpg)\n\nPhoto by &lt;a href=\"https://unsplash.com/@dmey503?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\"&gt;Dan Meyers&lt;/a&gt; on &lt;a href=\"https://unsplash.com/photos/aerial-photography-of-body-of-water-w6X7XaolqA0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\"&gt;Unsplash&lt;/a&gt;\n:::\n\n\n\n\n\n\n\n\nPhoto by Dan Meyers on Unsplash"
   },
   {
     "objectID": "01-documents/01-slides.html#divs-2",
@@ -274,21 +274,21 @@
     "href": "01-documents/01-slides.html#spans",
     "title": "Quarto Documents",
     "section": "Spans",
-    "text": "Spans\n\n\nmy-document.qmd\n\nThis is text that is [red]{style=\"color:red;\"}.\n\nThis is text that is red.\n\n\n\nmy-document.qmd\n\n![](penguin.jpg){fig-alt=\"A photo of a penguin jumping\"}"
+    "text": "Spans\n\n\nmy-document.qmd\n\nThis is text that is [red]{style=\"color:red;\"}.\n\nThis is text that is red.\n\n\n\nmy-document.qmd\n\n![](dam.jpg){fig-alt=\"A photo of a dam in Detroit\"}"
   },
   {
     "objectID": "01-documents/01-slides.html#changing-formats-1",
     "href": "01-documents/01-slides.html#changing-formats-1",
     "title": "Quarto Documents",
     "section": "Changing formats",
-    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: revealjs\n---"
+    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: revealjs\n---"
   },
   {
     "objectID": "01-documents/01-slides.html#changing-formats-2",
     "href": "01-documents/01-slides.html#changing-formats-2",
     "title": "Quarto Documents",
     "section": "Changing formats",
-    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"Quarto---To Tell Your Story with Data\"\nformat: pdf\n---"
+    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: pdf\n---"
   },
   {
     "objectID": "01-documents/01-slides.html#your-turn-1",
@@ -296,13 +296,6 @@
     "title": "Quarto Documents",
     "section": "Your turn",
     "text": "Your turn\n\nAdd an important callout box to “Key Findings at a Glance”:\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nTip\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "01-documents/01-slides.html#a-tour-of-quarto",
-    "href": "01-documents/01-slides.html#a-tour-of-quarto",
-    "title": "Quarto Documents",
-    "section": "A tour of Quarto",
-    "text": "A tour of Quarto\n\n\nAnatomy of a Quarto document\nUsing Quarto in editors\nCreating Quarto documents (metadata, markdown text, and code)\nChanging formats"
   },
   {
     "objectID": "01-documents/01-exercise02.html",
@@ -346,7 +339,7 @@
     "href": "index.html#instructor",
     "title": "Quarto—To Tell Your Story with Data",
     "section": "Instructor",
-    "text": "Instructor\nIsabella Velásquez is a Senior Product Marketing Manager at Posit Software, where she develops strategic content to increase brand visibility and drive product adoption. She has a background in data analysis, reporting, and visualization and holds an MS in Analytics and a BA in Economics and East Asian Languages and Civilizations from the University of Chicago.\n   \n\n This work is licensed under a Creative Commons Attribution 4.0 International License.\nThe website is based on a template by Mine Çetinkaya-Rundel, used with appreciation and adapted for this webinar.",
+    "text": "Instructor\nIsabella Velásquez is a Senior Product Marketing Manager at Posit Software, where she develops strategic content to increase brand visibility and drive product adoption. She has a background in data analysis, reporting, and visualization and holds an MS in Analytics and a BA in Economics and East Asian Languages and Civilizations from the University of Chicago.\n   \n\n This work is licensed under a Creative Commons Attribution 4.0 International License.\nThe website is based on a template by Mine Çetinkaya-Rundel, used with appreciation and adapted for this workshop.",
     "crumbs": [
       "Home"
     ]
@@ -513,18 +506,11 @@
     "text": "Your turn\nGo to the workshop website and click on 00 - Introduction in the sidebar.\n\n\nbit.ly/gasp2025-quarto\n\n\nFollow the setup instructions at the bottom.\n\n\n\n−+\n05:00"
   },
   {
-    "objectID": "00-introduction/00-slides.html#our-turn",
-    "href": "00-introduction/00-slides.html#our-turn",
+    "objectID": "00-introduction/00-slides.html#our-turn-quarto-workflow",
+    "href": "00-introduction/00-slides.html#our-turn-quarto-workflow",
     "title": "Intro to Quarto",
-    "section": "Our turn",
-    "text": "Our turn\nQuarto workflow\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nMake a change and preview/render again."
-  },
-  {
-    "objectID": "00-introduction/00-slides.html#preview-your-quarto-document",
-    "href": "00-introduction/00-slides.html#preview-your-quarto-document",
-    "title": "Intro to Quarto",
-    "section": "Preview your Quarto document",
-    "text": "Preview your Quarto document\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again.\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n05:00"
+    "section": "Our turn: Quarto workflow",
+    "text": "Our turn: Quarto workflow\n\nOpen a .qmd file.\nPreview/render the document.\nMake a change and preview/render again."
   },
   {
     "objectID": "00-introduction/00-slides.html#your-turn-1",
@@ -532,13 +518,6 @@
     "title": "Intro to Quarto",
     "section": "Your turn",
     "text": "Your turn\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again.\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "00-introduction/00-slides.html#preview-your-quarto-document-1",
-    "href": "00-introduction/00-slides.html#preview-your-quarto-document-1",
-    "title": "Intro to Quarto",
-    "section": "Preview your Quarto document",
-    "text": "Preview your Quarto document\n\nOpen the .qmd file.\nPreview/render the document.\nMake changes and preview/render again.\n\n\n\n\n\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "00-introduction/00-slides.html#why-is-it-called-quarto",
@@ -550,13 +529,6 @@
   {
     "objectID": "00-introduction/00-exercises02.html",
     "href": "00-introduction/00-exercises02.html",
-    "title": "Quarto---To Tell Your Story with Data",
-    "section": "",
-    "text": "Open the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again."
-  },
-  {
-    "objectID": "00-introduction/00-exercises02.html#preview-your-quarto-document",
-    "href": "00-introduction/00-exercises02.html#preview-your-quarto-document",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
     "text": "Open the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again."
@@ -592,21 +564,11 @@
     ]
   },
   {
-    "objectID": "00-introduction/index.html#exercises",
-    "href": "00-introduction/index.html#exercises",
+    "objectID": "00-introduction/index.html#exercise-1",
+    "href": "00-introduction/index.html#exercise-1",
     "title": "00 - Welcome and Introduction",
-    "section": "Exercises",
-    "text": "Exercises",
-    "crumbs": [
-      "00 - Introduction"
-    ]
-  },
-  {
-    "objectID": "00-introduction/index.html#preview-your-quarto-document",
-    "href": "00-introduction/index.html#preview-your-quarto-document",
-    "title": "00 - Welcome and Introduction",
-    "section": "Preview your Quarto document",
-    "text": "Preview your Quarto document\n\nOpen the .qmd file.\nPreview/render the document.\nMake changes and preview/render again.",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again.",
     "crumbs": [
       "00 - Introduction"
     ]
@@ -616,7 +578,7 @@
     "href": "01-documents/01-exercise01.html",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
-    "text": "Open 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values:"
+    "text": "Open 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of dams:\n\n\nRPython\n\n\n\n`r format(nrow(dat), big.mark = \",\")`\n\n\n\n\n`{python} f\"{total_dams:,}\"`"
   },
   {
     "objectID": "01-documents/index.html",
@@ -643,7 +605,7 @@
     "href": "01-documents/index.html#exercises",
     "title": "01 - Quarto Documents",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1\n\nOpen 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values:\n\n\n\nExercise 2\n\nAdd an important callout box to “Key Findings at a Glance”:\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nTip\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.",
+    "text": "Exercises\n\nExercise 1\n\nOpen 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of dams:\n\n\nRPython\n\n\n\n`r format(nrow(dat), big.mark = \",\")`\n\n\n\n\n`{python} f\"{total_dams:,}\"`\n\n\n\n\n\n\nExercise 2\n\nAdd an important callout box to “Key Findings at a Glance”:\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nTip\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.",
     "crumbs": [
       "01 - Documents"
     ]
@@ -802,46 +764,6 @@
     ]
   },
   {
-    "objectID": "04-publishing/index.html#exercise",
-    "href": "04-publishing/index.html#exercise",
-    "title": "04 - Publishing Quarto",
-    "section": "Exercise",
-    "text": "Exercise\nIf you have a GitHub account and have cloned the workshop repo, sign up for a free Posit Connect Cloud account: https://connect.posit.cloud/\n\nClick the blue “Publish” button.\nSelect “Quarto”.\nSelect your workshop repository.\nSelect publish-dashboard as the branch.\nClick “Publish”.",
-    "crumbs": [
-      "04 - Publishing"
-    ]
-  },
-  {
-    "objectID": "00-introduction/index.html#exercise-1",
-    "href": "00-introduction/index.html#exercise-1",
-    "title": "00 - Welcome and Introduction",
-    "section": "Exercise 1",
-    "text": "Exercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again.",
-    "crumbs": [
-      "00 - Introduction"
-    ]
-  },
-  {
-    "objectID": "02-projects/index.html#exercise-1",
-    "href": "02-projects/index.html#exercise-1",
-    "title": "02 - Quarto Projects",
-    "section": "Exercise 1",
-    "text": "Exercise 1\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml.\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML!\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”.",
-    "crumbs": [
-      "02 - Projects"
-    ]
-  },
-  {
-    "objectID": "03-theming/index.html#exercise-1",
-    "href": "03-theming/index.html#exercise-1",
-    "title": "03 - Theming Quarto",
-    "section": "Exercise 1",
-    "text": "Exercise 1\nIn the workshop repo, there is a file called 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document.\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.",
-    "crumbs": [
-      "03 - Theming"
-    ]
-  },
-  {
     "objectID": "04-publishing/index.html#exercise-1",
     "href": "04-publishing/index.html#exercise-1",
     "title": "04 - Publishing Quarto",
@@ -850,12 +772,5 @@
     "crumbs": [
       "04 - Publishing"
     ]
-  },
-  {
-    "objectID": "00-introduction/00-slides.html#our-turn-quarto-workflow",
-    "href": "00-introduction/00-slides.html#our-turn-quarto-workflow",
-    "title": "Intro to Quarto",
-    "section": "Our turn: Quarto workflow",
-    "text": "Our turn: Quarto workflow\n\nOpen a .qmd file.\nPreview/render the document.\nMake a change and preview/render again."
   }
 ]
