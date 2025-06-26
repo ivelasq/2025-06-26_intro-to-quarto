@@ -5,6 +5,7 @@ format:
     transition: fade
     background-transition: fade
     theme: ../style.scss
+    footer: <https://bit.ly/gasp2025>
 filters:
   - reveal-auto-agenda
 ---
@@ -49,6 +50,10 @@ my-folder/
 ├── my-document.ipynb
 ```
 :::
+:::
+
+::: notes
+Within a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project. Quarto projects also include a \_quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the \_quarto.yml file.
 :::
 
 ## \_quarto.yml {auto-animate="true"}
@@ -136,6 +141,10 @@ execute:
 execute:
   freeze: auto  # re-render only when source changes
 ```
+
+::: notes
+Rendering a bunch of files can be quite time consuming depending on the computations required. The freeze option specifies if computational documents should never be re-rendered during a global project render, or only be re-rendered when their source file changes. Freeze can used when you have either a large number of collaborators or many computational documents created over a long period of time. In these cases, it can be challenging to fully re-execute every document when you render the site. This could be because some documents have environment-specific requirements or one of your teammates wrote something in Python, which you don't have installed. Using freeze ensures that you can always reproducibly render your site.
+:::
 
 ## Your turn {background-color='{{< brand color pink >}}'}
 

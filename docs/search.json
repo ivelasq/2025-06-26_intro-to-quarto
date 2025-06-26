@@ -86,6 +86,16 @@
     ]
   },
   {
+    "objectID": "03-theming/index.html#more-information",
+    "href": "03-theming/index.html#more-information",
+    "title": "03 - Theming Quarto",
+    "section": "More Information",
+    "text": "More Information\nI gave a 1-hour talk at R-Ladies Rome on branding Quarto with brand.yml. Check it and the documentation out for more details. Sara Altman and I are also giving a workshop on branded Quarto at posit::conf in September!",
+    "crumbs": [
+      "03 - Theming"
+    ]
+  },
+  {
     "objectID": "02-projects/index.html",
     "href": "02-projects/index.html",
     "title": "02 - Quarto Projects",
@@ -116,6 +126,16 @@
     ]
   },
   {
+    "objectID": "02-projects/index.html#more-information",
+    "href": "02-projects/index.html#more-information",
+    "title": "02 - Quarto Projects",
+    "section": "More Information",
+    "text": "More Information\n\nQuarto Dashboards Video Series by Mine Çetinkaya-Rundel\nQuarto Websites Video Series by Charlotte Wickham and Emil Hvitfedlt",
+    "crumbs": [
+      "02 - Projects"
+    ]
+  },
+  {
     "objectID": "02-projects/02-exercise02.html",
     "href": "02-projects/02-exercise02.html",
     "title": "Quarto---To Tell Your Story with Data",
@@ -127,21 +147,21 @@
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-1",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\n.qmd file format with three components:\n\nYAML: Metadata\nText: Markdown\nCode: Executed via jupyter or knitr\n\n\nWeave it all together, and you have beautiful, powerful, and useful outputs!"
+    "text": "Anatomy of a Quarto document\n.qmd file format with three components:\n\nYAML: Metadata\nText: Markdown\nCode: R, Python, Observable, and Julia\n\n\nWeave it all together, and you have beautiful, powerful, and useful outputs!\n\nA Quarto document contains three types of content: a YAML header, code chunks, and markdown text."
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-2",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-2",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nMetadata: YAML\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\n\n\n“Yet another markup language”\nMetadata of your document\nDemarcated by three dashes (---) on either end\nUses key-value pairs in the format key: value"
+    "text": "Anatomy of a Quarto document\nMetadata: YAML\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\n\n\n“Yet another markup language”\nMetadata of your document\nDemarcated by three dashes (---) on either end\nUses key-value pairs in the format key: value\n\n\n\nQuarto documents usually start with an (optional) YAML header demarcated by three dashes on either end. The basic syntax of YAML uses key-value pairs in the format key: value. It controls the output of the document and contain metadata for your document. YAML fields commonly found in headers of documents include metadata like author, subtitle, date as well as customization options like theme, fontcolor, fig-width, etc."
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-3",
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-3",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nText: Markdown\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis analysis explores the National Inventory of Dams (NID) dataset.\n\n\n\nMarkdown is a lightweight language for creating formatted text\nQuarto is based on Pandoc and uses its variation of markdown as its underlying document syntax"
+    "text": "Anatomy of a Quarto document\nText: Markdown\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis analysis explores the National Inventory of Dams (NID) dataset.\n\n\n\nMarkdown is a lightweight language for creating formatted text\nQuarto is based on Pandoc and uses its variation of markdown as its underlying document syntax\n\n\nMarkdown is a lightweight markup language for creating formatted text using a plain-text editor. Quarto uses markdown syntax for text."
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-4",
@@ -169,7 +189,7 @@
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-7",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nCode\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```\n\n\n\nCode chunks begin and end with three backticks (usually)\nCode chunks are identified with a programming language in between {}"
+    "text": "Anatomy of a Quarto document\nCode\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```\n\n\n\nCode chunks begin and end with three backticks (usually)\nCode chunks are identified with a programming language in between {}\n\n\n\nCode chunks are identified with three backticks, the language in curly brackets, and can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk."
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-8",
@@ -183,7 +203,7 @@
     "href": "01-documents/01-slides.html#anatomy-of-a-quarto-document-9",
     "title": "Quarto Documents",
     "section": "Anatomy of a Quarto document",
-    "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\n#| include: false\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```"
+    "text": "Anatomy of a Quarto document\nCode can include optional chunk options, in YAML style, identified by #| at the beginning of the line\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---\n\nThis is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.\n\n```{python}\n#| echo: false\nfrom plotnine import ggplot, aes, geom_bar\n\n(\n    ggplot(mpg, aes(x = \"state\", y = \"dams\"))\n    + geom_bar()\n)\n```\n\nCode chunks can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk."
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-10",
@@ -232,21 +252,21 @@
     "href": "01-documents/01-slides.html#diagrams",
     "title": "Quarto Documents",
     "section": "Diagrams",
-    "text": "Diagrams\nQuarto has native support for embedding Mermaid and Graphviz diagrams.\n\n```{mermaid}\n%%| fig-width: 6\nflowchart LR\n  A[1] --&gt; B(2)\n  B --&gt; C{3}\n  C --&gt; D[4]\n  C --&gt; E[5]\n```\n\n\n\n\nflowchart LR\n  A[1] --&gt; B(2)\n  B --&gt; C{3}\n  C --&gt; D[4]\n  C --&gt; E[5]\n\n\n\n\n\n\n\nThere is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it’s a pretty handy tool to get to know."
+    "text": "Diagrams\n\n```{mermaid}\n%%| fig-width: 6\nflowchart LR\n  A[1] --&gt; B(2)\n  B --&gt; C{3}\n  C --&gt; D[4]\n  C --&gt; E[5]\n```\n\n\n\n\nflowchart LR\n  A[1] --&gt; B(2)\n  B --&gt; C{3}\n  C --&gt; D[4]\n  C --&gt; E[5]\n\n\n\n\n\n\n\nThere is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it’s a pretty handy tool to get to know."
   },
   {
     "objectID": "01-documents/01-slides.html#equations",
     "href": "01-documents/01-slides.html#equations",
     "title": "Quarto Documents",
     "section": "Equations",
-    "text": "Equations\n```{markdown}\n$$E = mc^{2}$$\n```\n\\[E = mc^{2}\\]"
+    "text": "Equations\n```{markdown}\n$$E = mc^{2}$$\n```\n\\[E = mc^{2}\\]\n\nMath mode in LaTeX"
   },
   {
     "objectID": "01-documents/01-slides.html#divs-and-spans",
     "href": "01-documents/01-slides.html#divs-and-spans",
     "title": "Quarto Documents",
     "section": "Divs and Spans",
-    "text": "Divs and Spans\nYou can add classes, attributes, and other identifiers to content using Divs and Spans.\nDivs\n::: {.border}\nThis content can be styled with a border\n:::\nSpans\n[This is *some text*]{.class key=\"val\"}\nThis is some text"
+    "text": "Divs and Spans\nDivs\n::: {.border}\nThis content can be styled with a border\n:::\nSpans\n[This is *some text*]{.class key=\"val\"}\nThis is some text\n\nFor furture customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well."
   },
   {
     "objectID": "01-documents/01-slides.html#divs",
@@ -274,18 +294,25 @@
     "href": "01-documents/01-slides.html#spans",
     "title": "Quarto Documents",
     "section": "Spans",
-    "text": "Spans\n\n\nmy-document.qmd\n\nThis is text that is [red]{style=\"color:red;\"}.\n\nThis is text that is red.\n\n\n\nmy-document.qmd\n\n![](dam.jpg){fig-alt=\"A photo of a dam in Detroit\"}"
+    "text": "Spans\n\n\nmy-document.qmd\n\nThis is text that is [red]{style=\"color:red;\"}.\n\nThis is text that is red.\n\n\n\nmy-document.qmd\n\n![](dam.jpg){fig-alt=\"A photo of a dam in Detroit\"}\n\n\n\nYou can also apply styles to inline text by creating spans. Use square brackets to surround the text and curly bracketes for the style you would like."
   },
   {
     "objectID": "01-documents/01-slides.html#changing-formats-1",
     "href": "01-documents/01-slides.html#changing-formats-1",
     "title": "Quarto Documents",
     "section": "Changing formats",
-    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: revealjs\n---"
+    "text": "Changing formats\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: html\n---"
   },
   {
     "objectID": "01-documents/01-slides.html#changing-formats-2",
     "href": "01-documents/01-slides.html#changing-formats-2",
+    "title": "Quarto Documents",
+    "section": "Changing formats",
+    "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: revealjs\n---"
+  },
+  {
+    "objectID": "01-documents/01-slides.html#changing-formats-3",
+    "href": "01-documents/01-slides.html#changing-formats-3",
     "title": "Quarto Documents",
     "section": "Changing formats",
     "text": "Changing formats\n\n\n\n\nmy-document.qmd\n\n---\ntitle: \"The Story of America's Dam Infrastructure\"\nformat: pdf\n---"
@@ -295,14 +322,14 @@
     "href": "01-documents/01-slides.html#your-turn-1",
     "title": "Quarto Documents",
     "section": "Your turn",
-    "text": "Your turn\n\nAdd an important callout box to “Key Findings at a Glance”:\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nTip\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nAdd an important callout box to “Key Findings at a Glance”:\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy.\n\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "01-documents/01-exercise02.html",
     "href": "01-documents/01-exercise02.html",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
-    "text": "Add an important callout box to “Key Findings at a Glance”:\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nTip\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy."
+    "text": "Add an important callout box to “Key Findings at a Glance”:\n\n::: {.callout-important}\n_text here_\n:::\n\nChange the format to revealjs. Preview the document.\nChange the format to pdf. Preview the document.\n\n\n\n\n\n\n\nNote\n\n\n\nRemoving code-fold, code-summary, and embed-resources is not required because these are html only features. However, I’d recommend removing them to keep your document tidy."
   },
   {
     "objectID": "index.html",
@@ -349,7 +376,7 @@
     "href": "00-introduction/00-exercises01.html",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
-    "text": "To follow along with the workshop exercises, you’ll need Quarto version 1.7+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, I recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python). I will delete the Posit Cloud and GitHub Codespace in a few days, so please make a copy of your materials if you would like to keep them.\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud\nOpen the Posit Cloud project link: https://posit.cloud/content/10523289\nTo save a copy of the project to your workspace, click “Save a permanent copy”\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nRequires a free account at https://github.com/\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-codespace\nClick “Use this template” then “Open in a codespace”\n\nPlease note that loading the codespace will take a few minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html\nQuarto comes pre-installed\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+\n\nQuarto comes pre-installed\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/ivelasq/gasp2025-quarto-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-exercises\nClick the green “Code” button → “Download ZIP”\nUnzip the folder and open it in your chosen editor\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\ninstall.packages(\"pak\")\npak::pak(c(\"dplyr\", \"ggplot2\", \"here\", \"janitor\", \"knitr\", \"readr\", \"scales\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies"
+    "text": "To follow along with the workshop exercises, you’ll need Quarto version 1.7+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, I recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python). I will delete the Posit Cloud project in a few days, so please make a copy of your materials if you would like to keep them.\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud\nOpen the Posit Cloud project link: https://posit.cloud/content/10523289\nTo save a copy of the project to your workspace, click “Save a permanent copy”\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nRequires a free account at https://github.com/\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-codespace\nClick “Use this template” then “Open in a codespace”\n\nPlease note that loading the codespace will take a few minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\nYou will need to following the “Install the Necessary Packages” instructions below.\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html\nQuarto comes pre-installed\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+\n\nQuarto comes pre-installed\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/ivelasq/gasp2025-quarto-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-exercises\nClick the green “Code” button → “Download ZIP”\nUnzip the folder and open it in your chosen editor\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\nIf you are using Posit Cloud, the packages will be pre-installed.\ninstall.packages(\"pak\")\npak::pak(c(\"dplyr\", \"ggplot2\", \"here\", \"janitor\", \"knitr\", \"readr\", \"scales\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies"
   },
   {
     "objectID": "00-introduction/00-slides.html#about-me",
@@ -363,21 +390,21 @@
     "href": "00-introduction/00-slides.html#about-you",
     "title": "Intro to Quarto",
     "section": "About you",
-    "text": "About you\n\nPlease share in the chat…\n\nYour name\nYour professional affiliation\nWhat you produce with data (reports, dashboards, etc.)"
+    "text": "About you\n\nPlease share in the chat…\n\nYour name\nYour professional affiliation\nWhat you produce with data (reports, dashboards, etc.)\nWhat programming language you use"
   },
   {
     "objectID": "00-introduction/00-slides.html#about-this-workshop",
     "href": "00-introduction/00-slides.html#about-this-workshop",
     "title": "Intro to Quarto",
     "section": "About this workshop",
-    "text": "About this workshop\n\n\n\nThese materials are pitched at someone who:\n\nknows some R or Python\nhas R or Python installed\ncreates documents that display output from code\nmay be familiar new to Markdown and Quarto\n\n\n\n\nWhat you will walk away with:\n\nAn introductory knowledge of Quarto and its benefits\nExamples of documents with code"
+    "text": "About this workshop\n\n\n\nThese materials are pitched at someone who:\n\nknows some R or Python\nhas R or Python installed\ncreates documents that display output from code\nnew to Markdown and Quarto\n\n\n\n\nWhat you will walk away with:\n\nAn introductory knowledge of Quarto and its benefits of telling stories with data\nExamples of documents with code"
   },
   {
     "objectID": "00-introduction/00-slides.html#workshop-structure",
     "href": "00-introduction/00-slides.html#workshop-structure",
     "title": "Intro to Quarto",
     "section": "Workshop structure",
-    "text": "Workshop structure\n\n\nMy turn\n\nLecture segments\nFeel free to just watch, take notes, browse docs, or tinker around with the code\n\n\n\nOur turn\n\nLecture segments + live coding\n(Optionally) follow along with live coding\n\n\n\n\nYour turn\n\nPractice exercises for you\nAsk questions in the chat if you run into issues"
+    "text": "Workshop structure\n\n\nMy turn\n\nLecture segments\nFeel free to just watch, take notes, browse docs, or tinker around with the code\n\n\n\nOur turn\n\nLecture segments + live coding\n(Optionally) Follow along with live coding\n\n\n\n\nYour turn\n\nPractice exercises for you!\nAsk questions in the chat if you run into issues"
   },
   {
     "objectID": "00-introduction/00-slides.html#instructions",
@@ -391,7 +418,7 @@
     "href": "00-introduction/00-slides.html#what-is-quarto",
     "title": "Intro to Quarto",
     "section": "What is Quarto®?",
-    "text": "What is Quarto®?\n\nQuarto® is an\n\nopen-source\n\n\nscientific and technical\n\n\npublishing system\n\n\nbuilt on Pandoc."
+    "text": "What is Quarto®?\n\nQuarto® is an\n\nopen-source\n\n\nscientific and technical\n\n\npublishing system\n\n\nbuilt on Pandoc.\n\n\n\nQuarto is an open-source scientific and technical publishing system built on Pandoc. Let’s break this down: Open-source: Posit believes that it’s better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format. Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write."
   },
   {
     "objectID": "00-introduction/00-slides.html#with-quarto",
@@ -412,14 +439,14 @@
     "href": "00-introduction/00-slides.html#why-quarto",
     "title": "Intro to Quarto",
     "section": "Why Quarto?",
-    "text": "Why Quarto?\n\n\nMultilingual and independent of computational systems\nConsistent expression for core features\nEnable “single-source publishing” — create Word, PDFs, HTML, etc. from one source\nUse defaults that meet accessibility guidelines\nQuarto comes “batteries included” straight out of the box"
+    "text": "Why Quarto?\n\n\nMultilingual and independent of computational systems\nQuarto comes “batteries included” straight out of the box\nConsistent expression for core features\nExtension system\nEnable “single-source publishing” — create Word, PDFs, HTML, etc. from one source\nUse defaults that meet accessibility guidelines\n\n\n\nSo, if there already exist literate programming tools out there, why create a new one? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. You can create presentations, books, websites, and so on after installing Quarto, you do not have to install other tools to create different things. Consistent expression for core features means that regardless of whether you are making a presentation, book, or website, the syntax is written same way. And for things that aren’t part of base Quarto, there are extensions that can add further functionality. Single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source. And the Quarto team thinks deeply about accessibility and how to have Quarto default to meet accessibility guidelines."
   },
   {
     "objectID": "00-introduction/00-slides.html#why-quarto-for-telling-stories-with-data",
     "href": "00-introduction/00-slides.html#why-quarto-for-telling-stories-with-data",
     "title": "Intro to Quarto",
     "section": "Why Quarto for telling stories with data?",
-    "text": "Why Quarto for telling stories with data?\n\n\n\nA good story is…\n\nClear\nCredible\nProvides context\nCredible\n\n\n\n\nQuarto allows you to…\n\nUse many formats for telling your story\nReproduce and automate results\nMix code and narrative together\nAdd footnotes, cross-references"
+    "text": "Why Quarto for telling stories with data?\n\n\n\nA good story is…\n\nClear\nCredible\nProvides context\nEngaging\n\n\n\n\nQuarto allows you to…\n\nUse many formats for telling your story\nReproduce and automate results\nAdd footnotes, cross-references\nMix code and narrative together"
   },
   {
     "objectID": "00-introduction/00-slides.html#quarto-formats",
@@ -433,49 +460,49 @@
     "href": "00-introduction/00-slides.html#quarto-capabilities",
     "title": "Intro to Quarto",
     "section": "Quarto capabilities",
-    "text": "Quarto capabilities\nBuilt for technical documents:\nCross references\nAdvanced layout\nFigure/layout panels\nCallouts\nDiagrams\nExtensions\nInteractivity\nYAML intelligence\nPublishing\nConditional content\nNotebook filters"
+    "text": "Quarto capabilities\nBuilt for technical documents:\nCross references\nAdvanced layout\nFigure/layout panels\nCallouts\nDiagrams\nExtensions\nInteractivity\nYAML intelligence\nPublishing\nConditional content\nNotebook filters\n\nFeatures are constantly being build into Quarto, like YAML intelligence, figure panels, layouts, which we’ll cover later in the session."
   },
   {
     "objectID": "00-introduction/00-slides.html#display-data-and-results",
     "href": "00-introduction/00-slides.html#display-data-and-results",
     "title": "Intro to Quarto",
     "section": "Display data and results",
-    "text": "Display data and results\nVote Idaho Election Page by Andrew Heiss (Department of Public Management and Policy, Georgia State University) and the Idaho Secretary of State\n\n\n\n\n\n\nAndrew Heiss, in conjunction with the Idaho Secretary of State’s office, created a Quarto website for their primary election results."
+    "text": "Display data and results\nVote Idaho Election Page by Andrew Heiss (Department of Public Management and Policy, Georgia State University) and the Idaho Secretary of State\n\n\n\n\n\n\nLet’s see some examples of how people have used Quarto to tell their stories. Andrew Heiss, in conjunction with the Idaho Secretary of State’s office, created a Quarto website for Idaho’s primary election results."
   },
   {
     "objectID": "00-introduction/00-slides.html#display-data-and-results-1",
     "href": "00-introduction/00-slides.html#display-data-and-results-1",
     "title": "Intro to Quarto",
     "section": "Display data and results",
-    "text": "Display data and results\nHealth Trends in England by the Department of Health & Social Care\n\n\n\n\n\n\nHealth Trends"
+    "text": "Display data and results\nHealth Trends in England by the Department of Health & Social Care\n\n\n\n\n\n\nThe Department of Health & Social Care in England created a Health Trends tool to open up public health data to a broader audience, and were shortlisted in the Analysis in Government award."
   },
   {
     "objectID": "00-introduction/00-slides.html#walk-through-a-story",
     "href": "00-introduction/00-slides.html#walk-through-a-story",
     "title": "Intro to Quarto",
     "section": "Walk through a story",
-    "text": "Walk through a story\nCouncil Housing & Neighborhood Income Inequality in Vienna by Tamara Premrov and Matthias Schnetzer (European Centre for Social Welfare Policy and Research, Austria)"
+    "text": "Walk through a story\nCouncil Housing & Neighborhood Income Inequality in Vienna by Tamara Premrov and Matthias Schnetzer (European Centre for Social Welfare Policy and Research, Austria)\n\n\n\n\n\n\n\nPosit recently held a Scrollytelling contest. You may have seen articles in newspapers like the New York Times that display visualizations as you scroll through the document. Quarto has an extension called Scrollytelling that lets you create these sorts of stories in Quarto. This one, from folks at the European Centre for Social Welfare Policy and Research which talked about Housing & Neighborhood Income Inequality in Vienna, was one of the winners."
   },
   {
     "objectID": "00-introduction/00-slides.html#publish-papers",
     "href": "00-introduction/00-slides.html#publish-papers",
     "title": "Intro to Quarto",
     "section": "Publish papers",
-    "text": "Publish papers\n\n\nNavigating Hostility: The Effect of Nonprofit Transparency and Accountability on Donor Preferences in the Face of Shrinking Civic Space by Suparna Chaudhry (Lewis & Clark College, International Justice Lab at College of William & Mary) et al."
+    "text": "Publish papers\n\n\nNavigating Hostility: The Effect of Nonprofit Transparency and Accountability on Donor Preferences in the Face of Shrinking Civic Space by Suparna Chaudhry (Lewis & Clark College, International Justice Lab at College of William & Mary) et al.\n\n\n\n\nQuarto also has extensive features for writing journal articles, from diagrams and technical notation, to being able to publish according to journal standards through extensions."
   },
   {
     "objectID": "00-introduction/00-slides.html#automate-and-reproduce-your-output",
     "href": "00-introduction/00-slides.html#automate-and-reproduce-your-output",
     "title": "Intro to Quarto",
     "section": "Automate and reproduce your output",
-    "text": "Automate and reproduce your output\nDuplicating Quarto elements with code templates to reduce copy and paste errors by Althea A. Archer (United States Geological Survey)\n\n\nWith Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There’s a software engineering concept called the DRY Principle (“Don’t Repeat Yourself”) that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain."
+    "text": "Automate and reproduce your output\nDuplicating Quarto elements with code templates to reduce copy and paste errors by Althea A. Archer (United States Geological Survey)\n\n\nWith Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There’s a software engineering concept called the DRY Principle (“Don’t Repeat Yourself”) that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain. The folks at United States Geological Survey have great blog posts on how they are implementing these ideas in Quarto."
   },
   {
     "objectID": "00-introduction/00-slides.html#get-your-team-on-the-same-page",
     "href": "00-introduction/00-slides.html#get-your-team-on-the-same-page",
     "title": "Intro to Quarto",
     "section": "Get your team on the same page",
-    "text": "Get your team on the same page\nWe Converted Our Documentation to Quarto by Melissa Van Bussel (Statistics Canada)\n\n\n\n\n\n\nWebsite for R/Python User Group\nTraining resources\nPresentations"
+    "text": "Get your team on the same page\nWe Converted Our Documentation to Quarto by Melissa Van Bussel (Statistics Canada)\n\n\n\n\n\n\nWebsite for R/Python User Group\nTraining resources\nPresentations\n\n\n\nAnd finally, Melissa van Bussel gave a talk on how the Statistics Canada team converted not just their documentation, but training resources, presentations, and more to Quarto to streamline efforts."
   },
   {
     "objectID": "00-introduction/00-slides.html#wrap-up",
@@ -489,14 +516,21 @@
     "href": "00-introduction/00-slides.html#installation",
     "title": "Intro to Quarto",
     "section": "Installation",
-    "text": "Installation\n\n\n\n\n\n\n\nquarto.org/docs/get-started/"
+    "text": "Installation\n\n\n\n\n\n\n\nYou can download the Quarto Command Line Interface, or CLI, on quarto.org. When you download the Quarto CLI, though, that’s all you need to run Quarto, so you can use just your Terminal or Command Line Interface for everything that we’ll explore, but you will need to install a programming language if you’re going to run code with the CLI.\n\n\nquarto.org/docs/get-started/"
   },
   {
     "objectID": "00-introduction/00-slides.html#tools-for-authoring",
     "href": "00-introduction/00-slides.html#tools-for-authoring",
     "title": "Intro to Quarto",
     "section": "Tools for authoring",
-    "text": "Tools for authoring\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerminal\n\nquarto render"
+    "text": "Tools for authoring\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTerminal\n\nquarto render\n\n\nPart of the multilingualism of Quarto is that you are not tied to one tool. Quarto is meant for collaboration either within data science teams or across data science teams. So if someone is familiar with VS Code, but someone else likes to work in RStudio, they can still work on the same Quarto documents without having to switch to one tool or the other."
+  },
+  {
+    "objectID": "00-introduction/00-slides.html#our-turn",
+    "href": "00-introduction/00-slides.html#our-turn",
+    "title": "Intro to Quarto",
+    "section": "Our turn",
+    "text": "Our turn\nLet’s walk through your options for today.\n\n\nPosit Cloud\nGitHub Codespace\nLocal installation\n\n\nGitHub repository\nPackage installation\n\n\n\nPosit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you’d like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You’ll also have to install the packages and download the repo materials. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop."
   },
   {
     "objectID": "00-introduction/00-slides.html#your-turn",
@@ -518,13 +552,6 @@
     "title": "Intro to Quarto",
     "section": "Your turn",
     "text": "Your turn\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again.\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "00-introduction/00-slides.html#why-is-it-called-quarto",
-    "href": "00-introduction/00-slides.html#why-is-it-called-quarto",
-    "title": "Intro to Quarto",
-    "section": "Why is it called “Quarto”?",
-    "text": "Why is it called “Quarto”?\n\n\n\n“Quarto is the format of a book orpamphlet produced from full sheetsprinted with eight pages of text, four to aside, then folded twice to produce four leaves.”\n— Wikipedia\n\n\n\n\n\n\n\n\n\nAccording to the website, the developers wanted to use a name that had meaning in the history of publishing and ulitimately landed on Quarto. A quarto is an 8-page double-sided booklet, made by folding a single sheet of paper into four sections.\n\n\n\n\nImage: The Perfect Gift for Family and Friends Is a Homemade Book"
   },
   {
     "objectID": "00-introduction/00-exercises02.html",
@@ -558,7 +585,7 @@
     "href": "00-introduction/index.html#set-up-instructions",
     "title": "00 - Welcome and Introduction",
     "section": "Set Up Instructions",
-    "text": "Set Up Instructions\nTo follow along with the workshop exercises, you’ll need Quarto version 1.7+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, I recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python). I will delete the Posit Cloud and GitHub Codespace in a few days, so please make a copy of your materials if you would like to keep them.\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud\nOpen the Posit Cloud project link: https://posit.cloud/content/10523289\nTo save a copy of the project to your workspace, click “Save a permanent copy”\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nRequires a free account at https://github.com/\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-codespace\nClick “Use this template” then “Open in a codespace”\n\nPlease note that loading the codespace will take a few minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html\nQuarto comes pre-installed\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+\n\nQuarto comes pre-installed\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/ivelasq/gasp2025-quarto-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-exercises\nClick the green “Code” button → “Download ZIP”\nUnzip the folder and open it in your chosen editor\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\ninstall.packages(\"pak\")\npak::pak(c(\"dplyr\", \"ggplot2\", \"here\", \"janitor\", \"knitr\", \"readr\", \"scales\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies",
+    "text": "Set Up Instructions\nTo follow along with the workshop exercises, you’ll need Quarto version 1.7+ and access to a code editor that supports R or Python.\nWhile Quarto itself doesn’t require a programming language, the exercises will include code chunks in R or Python. If you don’t already have R or Python set up locally, I recommend using a cloud-based option like Posit Cloud (for R) or GitHub Codespaces (for Python). I will delete the Posit Cloud project in a few days, so please make a copy of your materials if you would like to keep them.\n\nRecommended Setup Options\nOption 1: Posit Cloud (RStudio in the cloud)\n\nCreate a free account at https://posit.cloud\nOpen the Posit Cloud project link: https://posit.cloud/content/10523289\nTo save a copy of the project to your workspace, click “Save a permanent copy”\n\nOption 2: GitHub Codespaces (VS Code in the browser)\n\nRequires a free account at https://github.com/\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-codespace\nClick “Use this template” then “Open in a codespace”\n\nPlease note that loading the codespace will take a few minutes.\nIf you are asked to install an extension called markdownlit, say “yes” and trust the publisher.\n\nYou will need to following the “Install the Necessary Packages” instructions below.\n\nOption 3: Local Installation\nChoose one editor and follow the steps:\n\nPositronRStudioVS Code\n\n\n\nDownload and install Positron: https://positron.posit.co/download.html\nQuarto comes pre-installed\n\n\n\n\nDownload and install RStudio: https://posit.co/downloads/\n\nMake sure RStudio is version 2022.07+\n\nQuarto comes pre-installed\n\n\n\n\nDownload and install VS Code: https://code.visualstudio.com/download\nDownload and install Quarto: https://quarto.org/docs/get-started/\nInstall the following extensions:\n\nQuarto Extension: https://marketplace.visualstudio.com/items?itemName=quarto.quarto\nJupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n\n\n\n\n\n\nAccessing the Workshop Materials\nIf you are using a cloud-based option, the files will be included in the project folder.\nIf you are not using a cloud-based option:\nIf you use Git/GitHub:\n\nClone the repository with Git:\n\ngit clone https://github.com/ivelasq/gasp2025-quarto-exercises.git\nIf you don’t use Git/GitHub:\n\nGo to the GitHub repo: https://github.com/ivelasq/gasp2025-quarto-exercises\nClick the green “Code” button → “Download ZIP”\nUnzip the folder and open it in your chosen editor\n\n\n\nInstall the Necessary Packages\n\nRPython\n\n\nIf you are using Posit Cloud, the packages will be pre-installed.\ninstall.packages(\"pak\")\npak::pak(c(\"dplyr\", \"ggplot2\", \"here\", \"janitor\", \"knitr\", \"readr\", \"scales\"))\n\n\n\nCreate your virtual environment by selecting Python: Create Environment in the Command Palette\nSelect your environment type (recommend Venv)\nChoose an interpreter path\nSelect requirements.txt check box to install dependencies",
     "crumbs": [
       "00 - Introduction"
     ]
@@ -569,6 +596,16 @@
     "title": "00 - Welcome and Introduction",
     "section": "Exercise 1",
     "text": "Exercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again.",
+    "crumbs": [
+      "00 - Introduction"
+    ]
+  },
+  {
+    "objectID": "00-introduction/index.html#more-information",
+    "href": "00-introduction/index.html#more-information",
+    "title": "00 - Welcome and Introduction",
+    "section": "More Information",
+    "text": "More Information\n\nWhy is it called Quarto?\nAccording to the website, the developers wanted to use a name that had meaning in the history of publishing and ultimately landed on Quarto. A quarto is an 8-page double-sided booklet, made by folding a single sheet of paper into four sections.\n\nQuarto is the format of a book or pamphlet produced from full sheets printed with eight pages of text, four to a side, then folded twice to produce four leaves.\n— Wikipedia",
     "crumbs": [
       "00 - Introduction"
     ]
@@ -629,7 +666,7 @@
     "href": "02-projects/02-slides.html#anatomy-of-a-quarto-project",
     "title": "Quarto Projects",
     "section": "Anatomy of a Quarto project",
-    "text": "Anatomy of a Quarto project\n\n\nA Quarto Project is a directory that contains a file called _quarto.yml.\n\n\n\n\n\n\nThis is a Quarto Project.\nmy-folder/\n├── _quarto.yml\n├── my-document.ipynb\n\nThis is not.\nmy-folder/\n├── my-document.ipynb"
+    "text": "Anatomy of a Quarto project\n\n\nA Quarto Project is a directory that contains a file called _quarto.yml.\n\n\n\n\n\n\nThis is a Quarto Project.\nmy-folder/\n├── _quarto.yml\n├── my-document.ipynb\n\nThis is not.\nmy-folder/\n├── my-document.ipynb\n\n\nWithin a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project. Quarto projects also include a _quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the _quarto.yml file."
   },
   {
     "objectID": "02-projects/02-slides.html#quarto.yml",
@@ -650,21 +687,21 @@
     "href": "02-projects/02-slides.html#freeze",
     "title": "Quarto Projects",
     "section": "Freeze",
-    "text": "Freeze\nYou can use the freeze option to denote that computational documents should never be re-rendered during a global project render, or alternatively only be re-rendered when their source file changes:\n\n\n_quarto.yml\n\nexecute:\n  freeze: true  # never re-render during project render\n\n\n\n\n_quarto.yml\n\nexecute:\n  freeze: auto  # re-render only when source changes"
+    "text": "Freeze\nYou can use the freeze option to denote that computational documents should never be re-rendered during a global project render, or alternatively only be re-rendered when their source file changes:\n\n\n_quarto.yml\n\nexecute:\n  freeze: true  # never re-render during project render\n\n\n\n\n_quarto.yml\n\nexecute:\n  freeze: auto  # re-render only when source changes\n\n\nRendering a bunch of files can be quite time consuming depending on the computations required. The freeze option specifies if computational documents should never be re-rendered during a global project render, or only be re-rendered when their source file changes. Freeze can used when you have either a large number of collaborators or many computational documents created over a long period of time. In these cases, it can be challenging to fully re-execute every document when you render the site. This could be because some documents have environment-specific requirements or one of your teammates wrote something in Python, which you don’t have installed. Using freeze ensures that you can always reproducibly render your site."
   },
   {
     "objectID": "02-projects/02-slides.html#your-turn",
     "href": "02-projects/02-slides.html#your-turn",
     "title": "Quarto Projects",
     "section": "Your turn",
-    "text": "Your turn\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type “.”.\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml."
+    "text": "Your turn\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml."
   },
   {
     "objectID": "02-projects/02-slides.html#your-turn-1",
     "href": "02-projects/02-slides.html#your-turn-1",
     "title": "Quarto Projects",
     "section": "Your turn",
-    "text": "Your turn\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself.\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”.\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML!\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”.\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "03-theming/03-exercise.html",
@@ -723,25 +760,25 @@
     "text": "How to apply brand.yml automatically\n\nDefine branding in a single_brand.yml file.\nSave in the root directory of your Quarto project (alongside _quarto.yml)\n\nQuarto will detect the presence of _brand.yml and automatically apply the brand to all documents of the supported formats in the project."
   },
   {
-    "objectID": "03-theming/03-slides.html#specify-light-and-dark-themes",
-    "href": "03-theming/03-slides.html#specify-light-and-dark-themes",
+    "objectID": "03-theming/03-slides.html#specify-light-and-dark-themes-for-documents",
+    "href": "03-theming/03-slides.html#specify-light-and-dark-themes-for-documents",
     "title": "Theming Quarto",
-    "section": "Specify light and dark themes",
-    "text": "Specify light and dark themes\nYou can now specify a light and dark brand. For example, at a project-level you can provide two brand files:\n\n\n_quarto.yml\n\nbrand:\n  light: light-brand.yml\n  dark: dark-brand.yml"
+    "section": "Specify light and dark themes for documents",
+    "text": "Specify light and dark themes for documents\nYou can now specify a light and dark brand for documents. For example, at a project-level you can provide two brand files:\n\n\n_quarto.yml\n\nbrand:\n  light: light-brand.yml\n  dark: dark-brand.yml\n\n(Note: this is not available in reveal.js)."
+  },
+  {
+    "objectID": "03-theming/03-slides.html#specify-light-and-dark-themes-for-plots",
+    "href": "03-theming/03-slides.html#specify-light-and-dark-themes-for-plots",
+    "title": "Theming Quarto",
+    "section": "Specify light and dark themes for plots",
+    "text": "Specify light and dark themes for plots\nYou can use renderings to provide light and dark versions of a plot:\n\n\nmy-document.qmd\n\n---\nformat: \n  html:\n    theme:\n      light: light-brand.yml\n      dark: dark-brand.yml\n---\n\n```{python}\n#| renderings: [light, dark]\n(ggplot(purpose_data, aes(x='reorder(primary_purpose, n)', y='n')) +\n geom_col(fill='forestgreen', alpha=0.8) +\n geom_text(aes(label='label'), ha='left', size=8) +\n coord_flip() +\n scale_y_continuous(labels=lambda x: [f\"{int(i/1000)}k\" if i &gt;= 1000 else str(int(i)) for i in x]) +\n labs(title=\"Recreation Dominates American Dam Purposes\",\n      subtitle=\"Top 10 primary purposes for the nation's 92,428 dams\",\n      x=\"Primary Purpose\",\n      y=\"Number of Dams\",\n      caption=\"Source: National Inventory of Dams\") +\n theme_dam)\n```"
   },
   {
     "objectID": "03-theming/03-slides.html#your-turn",
     "href": "03-theming/03-slides.html#your-turn",
     "title": "Theming Quarto",
     "section": "Your turn",
-    "text": "Your turn\nIn the workshop repo, there is a file called 04-exercise.yml. Rename the file to _brand.yml and rerun your Quarto document.\nChange some of the variables in the _brand.yml file and rerun to see how your theme changes.\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "03-theming/03-slides.html#learn-more",
-    "href": "03-theming/03-slides.html#learn-more",
-    "title": "Theming Quarto",
-    "section": "Learn more",
-    "text": "Learn more\nI gave a 1-hour talk at R-Ladies Rome on branding Quarto with brand.yml. Check it and the documentation out for more details!"
+    "text": "Your turn\nIn the workshop repo, there is a file called 04-exercise.yml. Rename the file to _brand.yml and rerender your Quarto document.\nChange some of the variables in the _brand.yml file and rerender to see how your theme changes.\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "04-publishing/index.html",

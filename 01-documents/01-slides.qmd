@@ -5,6 +5,7 @@ format:
     transition: fade
     background-transition: fade
     theme: ../style.scss
+    footer: "bit.ly/gasp2025"
 filters:
   - reveal-auto-agenda
 ---
@@ -19,11 +20,15 @@ filters:
 
 2.  Text: Markdown
 
-3.  Code: Executed via `jupyter` or `knitr`
+3.  Code: R, Python, Observable, and Julia
 
 . . .
 
 **Weave it all together**, and you have beautiful, powerful, and useful outputs!
+
+::: notes
+A Quarto document contains three types of content: a YAML header, code chunks, and markdown text.
+:::
 
 ## Anatomy of a Quarto document
 
@@ -50,6 +55,10 @@ format: html
 
 ::::
 
+::: notes
+Quarto documents usually start with an (optional) YAML header demarcated by three dashes on either end. The basic syntax of YAML uses key-value pairs in the format key: value. It controls the output of the document and contain metadata for your document. YAML fields commonly found in headers of documents include metadata like author, subtitle, date as well as customization options like theme, fontcolor, fig-width, etc.
+:::
+
 ## Anatomy of a Quarto document
 
 **Text: Markdown**
@@ -67,6 +76,10 @@ This analysis explores the National Inventory of Dams (NID) dataset.
 
 * Markdown is a lightweight language for creating formatted text
 * Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax
+
+::: notes
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor. Quarto uses markdown syntax for text.
+:::
 
 ## Anatomy of a Quarto document
 
@@ -158,6 +171,10 @@ from plotnine import ggplot, aes, geom_bar
 
 ::::
 
+::: notes
+Code chunks are identified with three backticks, the language in curly brackets, and can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk.
+:::
+
 ## Anatomy of a Quarto document
 
 **Inline code** executes code *within Markdown*
@@ -187,7 +204,7 @@ format: html
 This is [**National Inventory of Dams (NID)**](https://nid.sec.usace.army.mil) data.
 
 ```{{python}}
-#| include: false
+#| echo: false
 from plotnine import ggplot, aes, geom_bar
 
 (
@@ -197,6 +214,10 @@ from plotnine import ggplot, aes, geom_bar
 ```
 
 ````
+
+::: notes
+Code chunks can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk.
+:::
 
 ## Anatomy of a Quarto document
 
@@ -304,8 +325,6 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 
 ## Diagrams
 
-Quarto has native support for embedding Mermaid and Graphviz diagrams.
-
 ```{mermaid}
 %%| fig-width: 6
 %%| echo: fenced
@@ -328,9 +347,11 @@ $$E = mc^{2}$$
 
 $$E = mc^{2}$$
 
-## Divs and Spans
+::: notes
+Math mode in LaTeX
+:::
 
-You can add classes, attributes, and other identifiers to content using Divs and Spans.
+## Divs and Spans
 
 **Divs**
 
@@ -343,6 +364,10 @@ You can add classes, attributes, and other identifiers to content using Divs and
     [This is *some text*]{.class key="val"}
 
 [This is *some text*]{.class key="val"}
+
+::: notes
+For furture customization, you can add classes, attributes, and other identifiers to content using Divs and Spans. Some are built into Quarto, and you can define your own, as well.
+:::
 
 ## Divs
 
@@ -427,7 +452,20 @@ This is text that is [red]{style="color:red;"}.
 
 ![](dam.jpg){fig-alt="A photo of a dam in Detroit"}
 
+::: notes
+You can also apply styles to inline text by creating spans. Use square brackets to surround the text and curly bracketes for the style you would like.
+:::
+
 # Changing formats
+
+## Changing formats
+
+````{.markdown code-line-numbers=3 filename="my-document.qmd"}
+---
+title: "The Story of America's Dam Infrastructure"
+format: html
+---
+````
 
 ## Changing formats
 

@@ -5,6 +5,7 @@ format:
     transition: fade
     background-transition: fade
     theme: ../style.scss
+    footer: <https://bit.ly/gasp2025>
 filters:
   - reveal-auto-agenda
 ---
@@ -127,15 +128,46 @@ typography:
 
 Quarto will detect the presence of `_brand.yml` and automatically apply the brand to all documents of the supported formats in the project.
 
-## Specify light and dark themes
+## Specify light and dark themes for documents
 
-You can now specify a light and dark brand. For example, at a project-level you can provide two brand files:
+You can now specify a light and dark brand for documents. For example, at a project-level you can provide two brand files:
 
 ```{.yaml filename="_quarto.yml"}
 brand:
   light: light-brand.yml
   dark: dark-brand.yml
 ```
+
+(Note: this is not available in reveal.js).
+
+## Specify light and dark themes for plots
+
+You can use `renderings` to provide light and dark versions of a plot:
+
+````{.markdown filename="my-document.qmd" code-line-numbers="4-6|10"}
+---
+format: 
+  html:
+    theme:
+      light: light-brand.yml
+      dark: dark-brand.yml
+---
+
+```{{python}}
+#| renderings: [light, dark]
+(ggplot(purpose_data, aes(x='reorder(primary_purpose, n)', y='n')) +
+ geom_col(fill='forestgreen', alpha=0.8) +
+ geom_text(aes(label='label'), ha='left', size=8) +
+ coord_flip() +
+ scale_y_continuous(labels=lambda x: [f"{int(i/1000)}k" if i >= 1000 else str(int(i)) for i in x]) +
+ labs(title="Recreation Dominates American Dam Purposes",
+      subtitle="Top 10 primary purposes for the nation's 92,428 dams",
+      x="Primary Purpose",
+      y="Number of Dams",
+      caption="Source: National Inventory of Dams") +
+ theme_dam)
+```
+````
 
 ## Your turn {background-color='{{< brand color pink >}}'}
 
@@ -147,9 +179,3 @@ brand:
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
-
-## Learn more {.smaller}
-
-I gave a 1-hour talk at R-Ladies Rome on branding Quarto with brand.yml. Check it and the documentation out for more details!
-
-<center><iframe width="800" height="450" src="https://www.youtube.com/embed/mTuhQ64P3qc?si=DOMIXyiS1imTe1Ja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>

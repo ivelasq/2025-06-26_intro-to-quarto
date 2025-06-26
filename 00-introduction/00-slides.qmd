@@ -6,6 +6,7 @@ format:
     transition: fade
     background-transition: fade
     theme: ../style.scss
+    footer: <https://bit.ly/gasp2025>
 filters:
   - reveal-auto-agenda
 ---
@@ -35,7 +36,7 @@ Please share in the chat...
 - Your name
 - Your professional affiliation
 - What you produce with data (reports, dashboards, etc.)
-
+- What programming language you use
 :::
 
 ## About this workshop
@@ -48,7 +49,7 @@ These materials are pitched at someone who:
 * knows some R or Python 
 * has R or Python installed
 * creates documents that display output from code
-* may be familiar new to Markdown and Quarto
+* new to Markdown and Quarto
 :::
 ::::
 
@@ -57,7 +58,7 @@ These materials are pitched at someone who:
 
 What you will walk away with:
 
-* An introductory knowledge of Quarto and its benefits
+* An introductory knowledge of Quarto and its benefits of telling stories with data
 * Examples of documents with code
 :::
 ::::
@@ -78,7 +79,7 @@ What you will walk away with:
 **Our turn**
 
 -   Lecture segments + live coding
--   (Optionally) follow along with live coding
+-   (Optionally) Follow along with live coding
 :::
 ::::
 
@@ -86,7 +87,7 @@ What you will walk away with:
 ::: your-turn
 **Your turn**
 
-- Practice exercises for you
+- Practice exercises for you!
 - Ask questions in the chat if you run into issues
 :::
 ::::
@@ -127,6 +128,11 @@ built on Pandoc.
 
 </center>
 
+::: notes
+Quarto is an open-source scientific and technical publishing system built on Pandoc. Let's break this down: Open-source: Posit believes that it's better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format. Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write.
+:::
+
+
 ## With Quarto...
 
 you can weave together narrative and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.
@@ -150,10 +156,15 @@ Quarto sits inside the big and broad literate programming world, which mixes nar
 
 ::: incremental
 - Multilingual and independent of computational systems
+- Quarto comes **"batteries included"** straight out of the box
 - Consistent expression for core features
+- Extension system
 - Enable “single-source publishing” — create Word, PDFs, HTML, etc. from one source
 - Use defaults that meet accessibility guidelines
-- Quarto comes **"batteries included"** straight out of the box
+:::
+
+::: notes
+So, if there already exist literate programming tools out there, why create a new one? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. You can create presentations, books, websites, and so on after installing Quarto, you do not have to install other tools to create different things. Consistent expression for core features means that regardless of whether you are making a presentation, book, or website, the syntax is written same way. And for things that aren't part of base Quarto, there are extensions that can add further functionality. Single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source. And the Quarto team thinks deeply about accessibility and how to have Quarto default to meet accessibility guidelines.
 :::
 
 ## Why Quarto for telling stories with data?
@@ -166,7 +177,7 @@ A good story is...
 * Clear
 * Credible
 * Provides context
-* Credible
+* Engaging
 :::
 ::::
 
@@ -176,8 +187,8 @@ Quarto allows you to...
 
 * Use many formats for telling your story
 * Reproduce and automate results
-* Mix code and narrative together
 * Add footnotes, cross-references
+* Mix code and narrative together
 :::
 ::::
 :::::
@@ -216,6 +227,10 @@ Built for technical documents:
     Conditional content
     Notebook filters
 
+::: notes
+Features are constantly being build into Quarto, like YAML intelligence, figure panels, layouts, which we'll cover later in the session.
+:::
+
 ## Display data and results {.smaller}
 
 [Vote Idaho Election Page](https://results.voteidaho.gov){preview-link="true"} by Andrew Heiss (Department of Public Management and Policy, Georgia State University) and the Idaho Secretary of State
@@ -223,7 +238,7 @@ Built for technical documents:
 [![](../images/id-elections.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://fosstodon.org/@andrew@fediscience.org/112485099746718354)
 
 ::: notes
-Andrew Heiss, in conjunction with the Idaho Secretary of State's office, created a Quarto website for their primary election results.
+Let's see some examples of how people have used Quarto to tell their stories. Andrew Heiss, in conjunction with the Idaho Secretary of State's office, created a Quarto website for Idaho's primary election results.
 :::
 
 ## Display data and results {.smaller}
@@ -233,7 +248,7 @@ Andrew Heiss, in conjunction with the Idaho Secretary of State's office, created
 [![](../images/england-health.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}](https://bsky.app/profile/statsgeekclare.bsky.social/post/3ld6iwagnzs2m)
 
 ::: notes
-Health Trends 
+The Department of Health & Social Care in England created a Health Trends tool to open up public health data to a broader audience, and were shortlisted in the Analysis in Government award.
 :::
 
 ## Walk through a story {.smaller}
@@ -241,6 +256,10 @@ Health Trends
 [Council Housing & Neighborhood Income Inequality in Vienna](https://mschnetzer.github.io/scrollytell_gemeindebau/){preview-link="true"} by Tamara Premrov and Matthias Schnetzer (European Centre for Social Welfare Policy and Research, Austria)
 
 <center><script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/izl69pu9ua.js" async type="module"></script><style>wistia-player[media-id='izl69pu9ua']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/izl69pu9ua/swatch'); display: block; filter: blur(5px); }</style> <wistia-player media-id="izl69pu9ua" aspect="1.7777777777777777" style="width: 800px;height: 463px;"></wistia-player></center>
+
+::: notes
+Posit recently held a Scrollytelling contest. You may have seen articles in newspapers like the New York Times that display visualizations as you scroll through the document. Quarto has an extension called Scrollytelling that lets you create these sorts of stories in Quarto. This one, from folks at the European Centre for Social Welfare Policy and Research which talked about Housing & Neighborhood Income Inequality in Vienna, was one of the winners.
+:::
 
 ## Publish papers {.smaller}
 
@@ -255,6 +274,10 @@ Health Trends
 ::::
 :::::
 
+::: notes
+Quarto also has extensive features for writing journal articles, from diagrams and technical notation, to being able to publish according to journal standards through extensions.
+:::
+
 ## Automate and reproduce your output {.smaller}
 
 [Duplicating Quarto elements with code templates to reduce copy and paste errors](https://waterdata.usgs.gov/blog/quarto-template-demo/){preview-link="true"} by Althea A. Archer (United States Geological Survey)
@@ -262,7 +285,7 @@ Health Trends
 ![](../images/quarto_template_overview.png){fig-align="center" width="40%" style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;"}
 
 ::: notes
-With Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There's a software engineering concept called the DRY Principle ("Don't Repeat Yourself") that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain.
+With Quarto, you can create reports or presentations that update automatically when data changes or when you change inputs because you are creating your report with code. There's a software engineering concept called the DRY Principle ("Don't Repeat Yourself") that is useful in data work that encourages writing code that can be reused with functions or loops instead of copy/paste. Use variables (parameters) to dynamically change parts of your analysis or report like to generate the same report for different regions, departments, or time periods, write reusable functions to avoid repeating code and keeps work cleaner, more consistent, and easier to maintain. The folks at United States Geological Survey have great blog posts on how they are implementing these ideas in Quarto.
 :::
 
 ## Get your team on the same page {.smaller}
@@ -283,6 +306,10 @@ With Quarto, you can create reports or presentations that update automatically w
 ::::
 :::::
 
+::: notes
+And finally, Melissa van Bussel gave a talk on how the Statistics Canada team converted not just their documentation, but training resources, presentations, and more to Quarto to streamline efforts.
+:::
+
 ## ️Wrap Up {background-image="../images/quarto-chat.jpg" background-color="#2b3d5b"}
 
 Quarto + Communication = ❤
@@ -300,6 +327,10 @@ Photo by <a href="https://unsplash.com/@kellysikkema?utm_content=creditCopyText&
 
 ::: aside
 [quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+:::
+
+::: notes
+You can download the Quarto Command Line Interface, or CLI, on quarto.org. When you download the Quarto CLI, though, that's all you need to run Quarto, so you can use just your Terminal or Command Line Interface for everything that we'll explore, but you will need to install a programming language if you're going to run code with the CLI.
 :::
 
 ## Tools for authoring
@@ -321,6 +352,27 @@ Photo by <a href="https://unsplash.com/@kellysikkema?utm_content=creditCopyText&
 ```{.bash filename="Terminal"}
 quarto render
 ```
+
+::: notes
+Part of the multilingualism of Quarto is that you are not tied to one tool. Quarto is meant for collaboration either within data science teams or across data science teams. So if someone is familiar with VS Code, but someone else likes to work in RStudio, they can still work on the same Quarto documents without having to switch to one tool or the other.
+:::
+
+## Our turn {background-color='{{< brand color light-blue >}}'}
+
+Let's walk through your options for today.
+
+::: incremental
+
+1. Posit Cloud
+2. GitHub Codespace
+3. Local installation
+ - GitHub repository
+ - Package installation
+:::
+ 
+::: notes
+Posit Cloud has R, RStudio, Quarto, packages, installed. You just need a free account. But I will delete in a few days. If you prefer Python, there is a GitHub Codespace. It takes many minutes to load so please open it up as soon as you can if you'd like to go this route. The packages will not come preinstalled, but the instructions are on the website. Finally, you can always install Positron, RStudio, or VS Code locally, but you will also need R or Python installed. You'll also have to install the packages and download the repo materials. So, if you do not have these set up, I recommend going with Posit Cloud or GitHub Codespace for now, and coming back to the materials after the workshop.
+:::
 
 ## Your turn {background-color='{{< brand color pink >}}'}
 
@@ -367,26 +419,3 @@ countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 
 # 5 minutes, warning at 1 minute
 countdown::countdown(minutes = 5, seconds = 0, play_sound = TRUE, warn_when = 1 * 60)
 ```
-
-## Why is it called "Quarto"?
-
-::: columns
-::: {.column width="60%"}
-::: {style="font-size:28px"}
-"Quarto is the format of a book or<br>pamphlet produced from full sheets<br>printed with eight pages of text, four to a<br>side, then folded twice to produce four leaves."
-
---- Wikipedia
-:::
-:::
-
-:::
-
-![](../images/quarto-book.png){fig-align="center"}
-
-::: aside
-Image: [The Perfect Gift for Family and Friends Is a Homemade Book](https://medium.com/swlh/impressing-my-family-and-friends-with-a-homemade-book-a02432a0a41a)
-:::
-
-::: notes
-According to the website, the developers wanted to use a name that had meaning in the history of publishing and ulitimately landed on Quarto. A quarto is an 8-page double-sided booklet, made by folding a single sheet of paper into four sections.
-:::
