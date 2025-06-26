@@ -5,7 +5,7 @@ format:
     transition: fade
     background-transition: fade
     theme: ../style.scss
-    footer: <https://bit.ly/gasp2025>
+    footer: <https://bit.ly/gasp2025-quarto>
 filters:
   - reveal-auto-agenda
 ---
@@ -22,6 +22,18 @@ Quarto projects are directories that provide:
 * The ability to freeze rendered output (i.e. don’t re-execute documents unless they have changed).
 
 :::
+
+::: notes
+One of the most important features of Quarto Projects is the ability to share YAML metadata options across multiple documents.
+:::
+
+## Quarto projects
+
+Some formats must be created within a Quarto project:
+
+* Websites
+* Blogs
+* Books
 
 ## Anatomy of a Quarto project
 
@@ -53,7 +65,7 @@ my-folder/
 :::
 
 ::: notes
-Within a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project. Quarto projects also include a \_quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the \_quarto.yml file.
+Quarto projects include a \_quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the \_quarto.yml file.
 :::
 
 ## \_quarto.yml {auto-animate="true"}

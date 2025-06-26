@@ -9,3 +9,5 @@ quarto create project
 * For **Title**, give it a title related to dams.
 
 Quarto will create several files, including `_quarto.yml`.
+
+* Open `_quarto.yml`.

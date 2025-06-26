@@ -5,7 +5,7 @@ format:
     transition: fade
     background-transition: fade
     theme: ../style.scss
-    footer: <https://bit.ly/gasp2025>
+    footer: <https://bit.ly/gasp2025-quarto>
 filters:
   - reveal-auto-agenda
 ---

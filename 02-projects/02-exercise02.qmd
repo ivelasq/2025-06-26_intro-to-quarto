@@ -9,9 +9,6 @@ navbar:
       text: Report
 ```
 
-* Open `about.qmd` and add some information about yourself. Feel free to edit the YAML!
-* Render the project:
-  * **All editors:** Run `quarto render` in the Terminal.
-  * **RStudio:** Click the "Render" button.
-  * **VS Code and Positron:** Click "Preview".
+* Open `about.qmd` and add some information about yourself. Feel free to edit the YAML.
+* Render the project, then explore your new website!
   

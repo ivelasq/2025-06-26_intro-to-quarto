@@ -1,8 +1,8 @@
 {
-  "hash": "c8138e23ad0abd0843a52a3df8d59536",
+  "hash": "4a93296a082a1f51fb18ed06148dd6b1",
   "result": {
     "engine": "knitr",
-    "markdown": "* Open `01-exercise-r.qmd` and preview the file:\n  * In RStudio, click the Render button.\n  * In Positron or VS Code, click the \"Preview\" button or press **Command** + **Shift** + **P**.\n* Add a `#| include: false` chunk option to the first cell. Preview the file and note the differences.\n* In the YAML, add an `author` field and add your name. Preview the file.\n* Change `code-fold` to be `true`. Preview the file.\n* Edit the first paragraph to (1) make something bold by surrounding the text with `**` and (2) use inline code instead of hardcoded values for the number of dams:\n\n::: {.panel-tabset}\n### R\n\n::: {.cell}\n\n```{.r .cell-code}\n`r format(nrow(dat), big.mark = \",\")`\n```\n:::\n\n### Python\n\n::: {.cell}\n\n```{.python .cell-code}\n`{python} f\"{total_dams:,}\"`\n```\n:::\n\n:::\n\n\n",
+    "markdown": "* Open `01-exercise-r.qmd` and run the first three code chunks (in order).\n* Preview the file.\n* Add a `#| include: false` chunk option to the first cell. Preview the file and note the differences.\n* In the YAML, add an `author` field and add your name. Preview the file.\n* Change `code-fold` to be `true`. Preview the file.\n* Edit the first paragraph to (1) make something bold by surrounding the text with `**` and (2) use inline code instead of hardcoded values for the number of dams:\n\n::: {.panel-tabset}\n### R\n\n::: {.cell}\n\n```{.r .cell-code}\n`r format(nrow(dat), big.mark = \",\")`\n```\n:::\n\n### Python\n\n::: {.cell}\n\n```{.python .cell-code}\n`{python} f\"{total_dams:,}\"`\n```\n:::\n\n:::\n\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

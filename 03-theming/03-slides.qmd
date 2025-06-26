@@ -5,7 +5,7 @@ format:
     transition: fade
     background-transition: fade
     theme: ../style.scss
-    footer: <https://bit.ly/gasp2025>
+    footer: <https://bit.ly/gasp2025-quarto>
 filters:
   - reveal-auto-agenda
 ---
@@ -149,8 +149,8 @@ You can use `renderings` to provide light and dark versions of a plot:
 format: 
   html:
     theme:
-      light: light-brand.yml
-      dark: dark-brand.yml
+      light: cosmo
+      dark: darkly
 ---
 
 ```{{python}}

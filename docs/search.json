@@ -120,7 +120,7 @@
     "href": "02-projects/index.html#exercise-1",
     "title": "02 - Quarto Projects",
     "section": "Exercise 1",
-    "text": "Exercise 1\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml.\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML!\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”.",
+    "text": "Exercise 1\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml.\n\nOpen _quarto.yml.\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML.\nRender the project, then explore your new website!",
     "crumbs": [
       "02 - Projects"
     ]
@@ -140,7 +140,7 @@
     "href": "02-projects/02-exercise02.html",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
-    "text": "Add final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML!\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”."
+    "text": "Add final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML.\nRender the project, then explore your new website!"
   },
   {
     "objectID": "01-documents/01-slides.html#anatomy-of-a-quarto-document-1",
@@ -224,7 +224,7 @@
     "href": "01-documents/01-slides.html#your-turn",
     "title": "Quarto Documents",
     "section": "Your turn",
-    "text": "Your turn\n\nOpen 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of dams:\n\n\nRPython\n\n\n\n`r format(nrow(dat), big.mark = \",\")`\n\n\n\n\n`{python} f\"{total_dams:,}\"`\n\n\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nOpen 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of dams:\n\n\nRPython\n\n\n\n`r format(nrow(dat), big.mark = \",\")`\n\n\n\n\n`{python} f\"{total_dams:,}\"`\n\n\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "01-documents/01-slides.html#images-and-links",
@@ -558,7 +558,7 @@
     "href": "00-introduction/00-exercises02.html",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
-    "text": "Open the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again."
+    "text": "Open the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again."
   },
   {
     "objectID": "00-introduction/index.html",
@@ -595,7 +595,7 @@
     "href": "00-introduction/index.html#exercise-1",
     "title": "00 - Welcome and Introduction",
     "section": "Exercise 1",
-    "text": "Exercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\nEdit the title and preview/render again.",
+    "text": "Exercise 1\n\nOpen the 01-exercise-py.qmd or 01-exercise-r.qmd file.\nPreview/render the document.\n\nPosit Cloud: You may be asked to allow pop-ups.\n\nEdit the title and preview/render again.",
     "crumbs": [
       "00 - Introduction"
     ]
@@ -615,7 +615,7 @@
     "href": "01-documents/01-exercise01.html",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
-    "text": "Open 01-exercise-r.qmd and preview the file:\n\nIn RStudio, click the Render button.\nIn Positron or VS Code, click the “Preview” button or press Command + Shift + P.\n\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of dams:\n\n\nRPython\n\n\n\n`r format(nrow(dat), big.mark = \",\")`\n\n\n\n\n`{python} f\"{total_dams:,}\"`"
+    "text": "Open 01-exercise-r.qmd and run the first three code chunks (in order).\nPreview the file.\nAdd a #| include: false chunk option to the first cell. Preview the file and note the differences.\nIn the YAML, add an author field and add your name. Preview the file.\nChange code-fold to be true. Preview the file.\nEdit the first paragraph to (1) make something bold by surrounding the text with ** and (2) use inline code instead of hardcoded values for the number of dams:\n\n\nRPython\n\n\n\n`r format(nrow(dat), big.mark = \",\")`\n\n\n\n\n`{python} f\"{total_dams:,}\"`"
   },
   {
     "objectID": "01-documents/index.html",
@@ -652,21 +652,28 @@
     "href": "02-projects/02-exercise01.html",
     "title": "Quarto---To Tell Your Story with Data",
     "section": "",
-    "text": "In your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml."
+    "text": "In your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml.\n\nOpen _quarto.yml."
   },
   {
     "objectID": "02-projects/02-slides.html#quarto-projects",
     "href": "02-projects/02-slides.html#quarto-projects",
     "title": "Quarto Projects",
     "section": "Quarto projects",
-    "text": "Quarto projects\nQuarto projects are directories that provide:\n\n\nA way to render all or some of the files in a directory with a single command (e.g. quarto render myproject).\nA way to share YAML configuration across multiple documents.\nThe ability to redirect output artifacts to another directory.\nThe ability to freeze rendered output (i.e. don’t re-execute documents unless they have changed)."
+    "text": "Quarto projects\nQuarto projects are directories that provide:\n\n\nA way to render all or some of the files in a directory with a single command (e.g. quarto render myproject).\nA way to share YAML configuration across multiple documents.\nThe ability to redirect output artifacts to another directory.\nThe ability to freeze rendered output (i.e. don’t re-execute documents unless they have changed).\n\n\n\nOne of the most important features of Quarto Projects is the ability to share YAML metadata options across multiple documents."
+  },
+  {
+    "objectID": "02-projects/02-slides.html#quarto-projects-1",
+    "href": "02-projects/02-slides.html#quarto-projects-1",
+    "title": "Quarto Projects",
+    "section": "Quarto projects",
+    "text": "Quarto projects\nSome formats must be created within a Quarto project:\n\nWebsites\nBlogs\nBooks"
   },
   {
     "objectID": "02-projects/02-slides.html#anatomy-of-a-quarto-project",
     "href": "02-projects/02-slides.html#anatomy-of-a-quarto-project",
     "title": "Quarto Projects",
     "section": "Anatomy of a Quarto project",
-    "text": "Anatomy of a Quarto project\n\n\nA Quarto Project is a directory that contains a file called _quarto.yml.\n\n\n\n\n\n\nThis is a Quarto Project.\nmy-folder/\n├── _quarto.yml\n├── my-document.ipynb\n\nThis is not.\nmy-folder/\n├── my-document.ipynb\n\n\nWithin a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project. Quarto projects also include a _quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the _quarto.yml file."
+    "text": "Anatomy of a Quarto project\n\n\nA Quarto Project is a directory that contains a file called _quarto.yml.\n\n\n\n\n\n\nThis is a Quarto Project.\nmy-folder/\n├── _quarto.yml\n├── my-document.ipynb\n\nThis is not.\nmy-folder/\n├── my-document.ipynb\n\n\nQuarto projects include a _quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the _quarto.yml file."
   },
   {
     "objectID": "02-projects/02-slides.html#quarto.yml",
@@ -694,14 +701,14 @@
     "href": "02-projects/02-slides.html#your-turn",
     "title": "Quarto Projects",
     "section": "Your turn",
-    "text": "Your turn\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml."
+    "text": "Your turn\n\nIn your folder, convert the document into a project by running:\n\n\n\nTerminal\n\nquarto create project\n\n\nFor Type, select website.\nFor Directory, type ..\nFor Title, give it a title related to dams.\n\nQuarto will create several files, including _quarto.yml.\n\nOpen _quarto.yml."
   },
   {
     "objectID": "02-projects/02-slides.html#your-turn-1",
     "href": "02-projects/02-slides.html#your-turn-1",
     "title": "Quarto Projects",
     "section": "Your turn",
-    "text": "Your turn\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML!\nRender the project:\n\nAll editors: Run quarto render in the Terminal.\nRStudio: Click the “Render” button.\nVS Code and Positron: Click “Preview”.\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\nAdd final-py.qmd or final-r.qmd under Home and give it the text Report:\n\n\n\n_quarto.yml\n\nnavbar:\n  left:\n    - href: index.qmd\n      text: Home\n    - href: final-r.qmd\n      text: Report\n\n\nOpen about.qmd and add some information about yourself. Feel free to edit the YAML.\nRender the project, then explore your new website!\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "03-theming/03-exercise.html",
@@ -771,7 +778,7 @@
     "href": "03-theming/03-slides.html#specify-light-and-dark-themes-for-plots",
     "title": "Theming Quarto",
     "section": "Specify light and dark themes for plots",
-    "text": "Specify light and dark themes for plots\nYou can use renderings to provide light and dark versions of a plot:\n\n\nmy-document.qmd\n\n---\nformat: \n  html:\n    theme:\n      light: light-brand.yml\n      dark: dark-brand.yml\n---\n\n```{python}\n#| renderings: [light, dark]\n(ggplot(purpose_data, aes(x='reorder(primary_purpose, n)', y='n')) +\n geom_col(fill='forestgreen', alpha=0.8) +\n geom_text(aes(label='label'), ha='left', size=8) +\n coord_flip() +\n scale_y_continuous(labels=lambda x: [f\"{int(i/1000)}k\" if i &gt;= 1000 else str(int(i)) for i in x]) +\n labs(title=\"Recreation Dominates American Dam Purposes\",\n      subtitle=\"Top 10 primary purposes for the nation's 92,428 dams\",\n      x=\"Primary Purpose\",\n      y=\"Number of Dams\",\n      caption=\"Source: National Inventory of Dams\") +\n theme_dam)\n```"
+    "text": "Specify light and dark themes for plots\nYou can use renderings to provide light and dark versions of a plot:\n\n\nmy-document.qmd\n\n---\nformat: \n  html:\n    theme:\n      light: cosmo\n      dark: darkly\n---\n\n```{python}\n#| renderings: [light, dark]\n(ggplot(purpose_data, aes(x='reorder(primary_purpose, n)', y='n')) +\n geom_col(fill='forestgreen', alpha=0.8) +\n geom_text(aes(label='label'), ha='left', size=8) +\n coord_flip() +\n scale_y_continuous(labels=lambda x: [f\"{int(i/1000)}k\" if i &gt;= 1000 else str(int(i)) for i in x]) +\n labs(title=\"Recreation Dominates American Dam Purposes\",\n      subtitle=\"Top 10 primary purposes for the nation's 92,428 dams\",\n      x=\"Primary Purpose\",\n      y=\"Number of Dams\",\n      caption=\"Source: National Inventory of Dams\") +\n theme_dam)\n```"
   },
   {
     "objectID": "03-theming/03-slides.html#your-turn",
